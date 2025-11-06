@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@400;600&display=swap');
+/* =================================================================
+   GLOBAL STYLES
+   ================================================================= */
+   body {
+    font-family: 'Reddit Sans', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* =================================================================
+   HERO SECTION STYLES
+   ================================================================= */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    color: #F4F4F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/assets/image/homepage_banner.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 14, 36, 0.5);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-subtext p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.border-top-custom {
+    border-top: 1px solid #6C757D;
+}
+
+.btn-about {
+    color: #1A4173;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #1A4173;
+    transition: all 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: #1A4173;
+    color: #FFFFFF;
+}
+
+
+
+/* =================================================================
+   PARTNERS SECTION STYLES (WITH YOUR EXACT PADDING REQUIREMENTS)
+   ================================================================= */
+
+/* Main section container */
+.partners-section {
+    background-color: #FFFFFF;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.section-header-wrapper {
+    width: 100%; /* Spans the full width of the section */
+    padding: 0 64px; /* Your requested 16px left/right padding */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    margin-bottom: 40px; /* Space between the header and the logo grid */
+}
+
+/* Header text styles (no change needed here) */
+.section-header .section-title {
+    color: #1A4173;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.section-header .section-subtitle {
+    color: #71717A;
+    font-size: 18px;
+}
+
+/* --- Wrapper for the logo grid --- */
+.logo-grid-container {
+    /* Your requested padding values */
+    padding-top: 10px;
+    padding-bottom: 16px;
+    padding-left: 230px;
+    padding-right: 230px;
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Optional: constrain width on very large screens */
+}
+
+/* --- IMPORTANT: Media Queries for Responsiveness --- */
+/* On tablets and smaller desktops, we reduce the large side padding */
+@media (max-width: 1200px) {
+    .logo-grid-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+/* On mobile phones, we use smaller padding */
+@media (max-width: 768px) {
+    .logo-grid-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .section-header-container {
+        text-align: center; /* Center text on mobile */
+    }
+}
+
+
+/* --- Reusable Logo Box Component (No change needed here) --- */
+.partner-logo-box {
+    background-color: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.partner-logo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo-box img {
+    max-height: 55px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* =================================================================
+   SERVICES SECTION STYLES (WITH PRECISE SPACING)
+   ================================================================= */
+/* =================================================================
+   SERVICES SECTION STYLES (COMPLETE)
+   ================================================================= */
+
+/* 1. Main Section Container */
+.services-section {
+    background-color: #FFFFFF;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    overflow: hidden;
+}
+
+/* 2. Section Header */
+.services-section .section-header {
+    margin-bottom: 40px; /* Gap between header and content grid */
+    font-family: 'Reddit Sans', sans-serif;
+}
+
+.services-section .section-header .section-title {
+    color: #1A4173;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px; /* Space between title and subtitle */
+}
+
+.services-section .section-header .section-subtitle {
+    color: #71717A;
+    font-size: 18px;
+}
+
+
+/* 3. Main Flexbox Wrapper (Controls the three-column layout) */
+.service-flex-wrapper {
+    display: flex;
+    align-items: center;    /* Vertically aligns items to the middle */
+    justify-content: center; /* Horizontally centers the items */
+    gap: 20px;               /* Space between items */
+}
+
+/* 4. Wrappers for Side Content (Handles the 64px padding) */
+.service-tabs-nav-wrapper {
+    padding-right: 64px;
+    flex-shrink: 0;
+    
+    /* --- THE FIX IS HERE --- */
+    /* Make this column a flex container to center its content */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Ensures the tabs stay aligned to the right */
+}
+
+.service-content-main-wrapper {
+    padding-left: 64px;
+    flex-shrink: 0;
+    width: 360px;       /* Gives the right-side content a fixed width */
+    display: flex;
+    align-items: center;
+}
+
+
+/* 5. Tab Navigation Styling */
+.service-tabs-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns buttons to the right */
+    gap: 20px;
+}
+
+.service-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 190px;
+    height: 40px;
+    padding: 8px 16px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #E4E4E7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #71717A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.service-tab i {
+    font-size: 16px;
+    width: 16px;
+    text-align: center;
+}
+
+.service-tab.active {
+    border-color: #1A4173;
+    color: #1A4173;
+}
+
+.service-tab:not(.active):hover {
+    border-color: #a1a1aa;
+    color: #111826;
+}
+
+
+/* 6. Image Styling */
+.service-image {
+    width: 400px;
+    height: 400px;
+    
+    /* Background Image Properties */
+    background-size: cover; /* This replaces object-fit */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Appearance */
+    border-radius: 12px;
+    border: 1px solid #E4E4E7;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    
+    /* Note: Fading background-image is complex; this provides an instant switch */
+    transition: opacity 0.4s ease; 
+}
+
+
+/* 7. Right-Side Content Area (Handles fade transitions) */
+.service-content-wrapper {
+    position: relative;
+}
+
+.service-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.service-content.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* 8. Text Styles within Content Area */
+.service-content-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111826;
+    margin-bottom: 16px;
+}
+
+.text-style-body {
+    color: #71717A;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+
+/* 9. Responsive Media Queries */
+@media (max-width: 1200px) {
+    /* On tablets and smaller, stack the items vertically */
+    .service-flex-wrapper {
+        flex-direction: column;
+        gap: 40px; /* Increase gap for vertical layout */
+    }
+
+    /* Remove the large side paddings */
+    .service-tabs-nav-wrapper,
+    .service-content-main-wrapper {
+        padding: 0;
+        width: 100%;
+        max-width: 400px; /* Optional: Keep content from getting too wide */
+    }
+
+    /* Center the tabs and text content */
+    .service-tabs-nav {
+        align-items: center;
+    }
+    .service-content-main-wrapper {
+        text-align: center;
+    }
+}
+
+
+/* =================================================================
+   PROJECTS SECTION STYLES
+   ================================================================= */
+   
+   .projects-section {
+    background-color: #FFFFFF;
+    padding: 64px 0;
+}
+
+.projects-section-wrapper{
+    width: 100%; /* Spans the full width of the section */
+    padding: 0 64px; 
+}
+
+/* --- Section Header (No changes) --- */
+.projects-section .section-header { margin-bottom: 10px; }
+.discover-link {
+    color: #1A4173; font-size: 14px; font-family: 'Reddit Sans', sans-serif;
+    font-style: italic; font-weight: 400; text-decoration: none; display: flex;
+    align-items: center; gap: 6px; transition: opacity 0.3s ease;
+}
+.discover-link:hover { opacity: 0.8; }
+.discover-link i { font-size: 12px; }
+
+
+/* --- Base Reusable Project Card --- */
+.project-card {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Multi-layer background: Image on top, solid white behind it */
+    background-repeat: no-repeat;
+    background-position: top center, center;
+    background-size: 100% 155px, cover; /* Default image height is 155px */
+    background-image: var(--bg-image), linear-gradient(to top, white, white);
+
+    /* --- THE KEY FIX --- */
+    /* Add padding to the top to push the content down, revealing the background image */
+    padding-top: 155px; 
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Shared Overlay for large cards */
+.project-card--large::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+/* --- Card Variations --- */
+/* 1. Large Card Modifier */
+.project-card--large {
+    min-height: 450px;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0; /* Override the padding for this variation */
+}
+
+.project-card--large::before {
+    opacity: 1;
+}
+
+/* 2. Tall Card Modifier */
+.project-card--tall {
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0; /* Override the padding for this variation */
+}
+
+
+/* --- Shared Content and Tag Styles --- */
+.project-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #FFFFFF; /* White background for content by default */
+}
+
+/* Large card content is transparent with white text */
+.project-card--large .project-card__content {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+/* Tall card content needs specific padding */
+.project-card--tall .project-card__content {
+    background-color: #FFFFFF;
+    padding-top: 46px; 
+    padding-bottom: 24px;
+}
+
+.project-card__label {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: #71717A;
+}
+.project-card--large .project-card__label {
+    color: inherit;
+}
+
+.project-card__title {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    color: #18181B;
+}
+.project-card--large .project-card__title {
+    color: inherit;
+}
+
+/* =================================================================
+   LATEST NEWS SECTION STYLES
+   ================================================================= */
+.news-section {
+    background-color: #FFFFFF;
+    padding: 64px 0;
+}
+
+.news-section-wrapper{
+    width: 100%; /* Spans the full width of the section */
+    padding: 0 64px; 
+}
+
+/* =================================================================
+   LATEST NEWS SECTION STYLES (CORRECTED - Image Visibility)
+   ================================================================= */
+
+/* --- Base Reusable News Card --- */
+.news-card {
+    border-radius: 8px;
+    border: 1px solid #E4E4E7;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* The background image is applied here via inline style */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 179px;
+    background-color: #FFFFFF; /* The white background for the content area */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Link that wraps the content */
+.news-card__link {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- THE KEY FIX IS HERE --- */
+/* Create a pseudo-element to act as the image placeholder */
+.news-card__link::before {
+    content: '';          /* Required for pseudo-elements */
+    display: block;       /* Make it a block-level element */
+    height: 179px;        /* Give it the exact height of the image */
+    flex-shrink: 0;       /* Prevent it from shrinking */
+}
+
+/* Content area below the image */
+.news-card__content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-grow: 1; /* Allows content to fill the remaining white space */
+}
+
+
+/* --- Text Styles (No changes needed) --- */
+.news-card__title {
+    color: #09090B;
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.news-card__excerpt {
+    color: #71717A;
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* =================================================================
+   PRESS RELATIONS SECTION STYLES
+   ================================================================= */
+.press-section-wrapper{
+    width: 100%; /* Spans the full width of the section */
+    padding: 0 64px; 
+}
+
+.press-section {
+    background-color: #FFFFFF;
+    padding: 64px 0;
+}
+
+/* --- Base Reusable Press Card --- */
+.press-card {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.press-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Card Variations --- */
+/* 1. Large Card (Full Background Image with Overlay) */
+.press-card--large {
+    min-height: 396px;
+    justify-content: flex-end; /* Pushes content to the bottom */
+    background-size: cover;
+    background-position: center;
+}
+/* The dark overlay for the large card */
+.press-card--large::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(56, 56, 56, 0.6) 100%);
+    z-index: 1;
+}
+
+/* 2. Small Card (Partial Background Image + White Background) */
+.press-card--small {
+    min-height: 395px;
+    justify-content: flex-end; /* Also pushes content to the bottom */
+    
+    /* --- THE KEY TECHNIQUE --- */
+    /* We apply two background layers, separated by a comma. */
+    /* Layer 1: The Image (on top) */
+    background-repeat: no-repeat;
+    background-position: top center, center; /* Position the image at the top */
+    background-size: 100% 237px, cover; /* Size the image to 237px height, and the fallback color to cover */
+    
+    /* We use a CSS variable to pass the image URL from HTML */
+    /* This rule assumes the inline style sets the variable */
+    background-image: var(--bg-image), linear-gradient(to top, white, white); 
+}
+/* This part is a bit of a trick. The inline style="background-image: url(...)" will override only the first layer. */
+
+
+/* --- Card Content and Tag (Shared) --- */
+.press-card__content {
+    position: relative;
+    z-index: 2; /* Content must be above overlays/backgrounds */
+    padding: 24px;
+}
+
+/* For the small card, the text is NOT overlaid */
+.press-card--small .press-card__content {
+    color: #18181B;
+}
+
+/* For the large card, the text IS overlaid and white */
+.press-card--large .press-card__content {
+    color: #FFFFFF;
+}
+
+.press-card__label {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: #71717A;
+}
+.press-card--large .press-card__label {
+    color: #FAFAFA;
+}
+
+.press-card__title {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+.press-card--large .press-card__title {
+    color: inherit;
+}
+
+/* Universal Card Tag */
+.card-tag {
+    position: absolute;
+    top: 0; left: 0; z-index: 3;
+    background: #FFFFFF;
+    padding: 8px 12px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.10);
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 4px;
+    display: flex; align-items: center; gap: 6px;
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: #09090B;
+}
+.card-tag i { color: #1A4173; }
+
+/* Load More Button */
+.btn-load-more {
+    color: #1A4173; background-color: #FFFFFF; border: 1px solid #1A4173;
+    padding: 8px 16px; font-size: 14px; font-family: 'Reddit Sans', sans-serif; font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-load-more:hover { background-color: #1A4173; color: #FFFFFF; }
