@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #1A4173;
+    --secondary-text-color: #5a5a5e;
+    --active-blue-color: #2662D9;
+    --text-color-dark: #09090B;
+    --text-color-light: #71717A;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--secondary-text-color);
+    overflow-y: auto; /* For scrolling on smaller screens */
+}
+
+h1, h2 {
+    font-family: 'Reddit Sans', sans-serif;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.contact-panel {
+    padding: 64px 64px;
+}
+
+.contact-content {
+    max-width: 600px;
+}
+
+/* Spacing Rules from Diagram */
+.header-section,
+.team-section,
+.office-section,
+.social-section,
+.copyright {
+    margin-bottom: 24px;
+}
+
+.header-section p {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.team-member img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.team-member .name {
+    font-weight: 500;
+    color: var(--text-color-dark);
+    font-size: 14px;
+}
+
+.team-member .title {
+    color: var(--text-color-light);
+    font-size: 14px;
+}
+
+.contact-details li {
+    font-size: 14px;
+    color: var(--text-color-dark);
+    margin-bottom: 8px;
+}
+
+.contact-details i {
+    color: var(--primary-color);
+    width: 20px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.address-list li {
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.address-list li:hover {
+    color: var(--active-blue-color);
+}
+
+.address-list i {
+    width: 14px;
+    margin-right: 8px;
+    color: var(--text-color-dark);
+}
+
+.address-list li.active,
+.address-list li.active i {
+    color: var(--active-blue-color);
+}
+
+.social-section {
+    display: flex;
+    align-items: center;
+}
+
+.social-section span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-dark);
+}
+
+.social-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+footer {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 20px;
+    font-style: italic;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    min-height: 100vh;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .row.vh-100 {
+        height: auto !important;
+    }
+    .contact-panel {
+        padding: 32px; /* Adjust padding for smaller screens */
+    }
+    .map-container {
+        min-height: 400px;
+    }
+}
