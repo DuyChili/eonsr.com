@@ -1,0 +1,622 @@
+/* =================================================================
+   ABOUT PAGE STYLES (about.css)
+   ================================================================= */
+
+body {
+    font-family: 'Reddit Sans', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.about-hero-section {
+    background: white;
+}
+
+.about-hero-container {
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 42px;
+    padding-bottom: 64px;
+}
+
+.about-hero-text {
+    /* 'width: 620px' từ Figma */
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* 'gap: 16px' */
+}
+
+.about-hero-title {
+    color: #1A4173;
+    font-size: 28px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    /* '33.60px' */
+    margin: 0;
+}
+
+/* 5. Mô tả */
+.about-hero-description {
+    color: #71717A;
+    font-size: 18px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    /* '21.60px' */
+    margin: 0;
+}
+
+/* 7. Responsive */
+@media (max-width: 767.98px) {
+    .about-hero-container {
+        padding: 32px 24px;
+        /* Giảm padding */
+    }
+
+    .about-hero-text {
+        max-width: 100%;
+        text-align: center;
+        /* Căn giữa text */
+    }
+
+    .about-hero-avatar {
+        justify-content: center;
+        /* Căn giữa avatar */
+        margin-top: 24px;
+    }
+}
+
+/* =================================================================
+   SECTION HÌNH ẢNH BANNER (TEAM)
+   ================================================================= */
+
+.about-image-banner {
+    /* Đảm bảo hình ảnh chiếm 100% chiều rộng 
+       mà không có padding */
+    width: 100%;
+    line-height: 0;
+    /* Xóa khoảng trắng thừa dưới ảnh */
+}
+
+.about-image-banner .img-fluid {
+    width: 100%;
+    height: auto;
+    /* Chiều cao tự động */
+    object-fit: cover;
+    /* Đảm bảo ảnh che phủ vừa vặn */
+}
+
+/* =================================================================
+   SECTION ĐỘI NGŨ LÃNH ĐẠO
+   ================================================================= */
+.leadership-section {
+    padding: 32px 64px;
+}
+
+.leadership-section .section-header {
+    margin-bottom: 42px;
+}
+
+/* Thẻ lãnh đạo */
+.leader-card {
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10);
+    height: 320px;
+    overflow: hidden;
+    gap: 12px;
+}
+
+/* Cột ảnh */
+.leader-card-image {
+    width: 302px;
+    /* 'width: 302px' */
+    height: 320px;
+    /* 'height: 320px' */
+    flex-shrink: 0;
+    /* Ngăn ảnh bị co lại */
+}
+
+.leader-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cột nội dung (Tên, quote, icons) */
+.leader-card-content {
+    flex-grow: 1;
+    /* Tự động lấp đầy phần còn lại */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Căn giữa dọc */
+    gap: 18px;
+    /* 'gap: 18px' */
+    /* 'padding-left: 12px; padding-right: 12px;' */
+    padding: 18px 12px;
+}
+
+.leader-name {
+    color: #09090B;
+    font-size: 18px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.leader-quote {
+    color: #71717A;
+    font-size: 14px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+
+    /* Giới hạn số dòng text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* Giới hạn 7 dòng (dựa trên chiều cao 320px) */
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+/* Vùng chứa Icons */
+.leader-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* 'gap: 15px' */
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Màu icon (từ Figma) */
+.icon-fb {
+    background: #1877F2;
+}
+
+.icon-li {
+    background: #0A66C2;
+}
+
+.icon-tg {
+    background: linear-gradient(180deg, #2AABEE 0%, #229ED9 100%);
+}
+
+.icon-di {
+    background: #5865F2;
+}
+
+.icon-tw {
+    background: #1D9BF0;
+}
+
+/* =================================================================
+   RESPONSIVE (LEADERSHIP SECTION)
+   ================================================================= */
+@media (max-width: 1200px) {
+    .leader-card {
+        /* Cho phép thẻ co giãn chiều cao */
+        height: auto;
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    /* Xếp chồng 2 cột (Ảnh và Text) trên Tablet */
+    .leader-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .leader-card-image {
+        width: 100%;
+        /* Ảnh chiếm 100% chiều rộng */
+        height: 350px;
+        /* Chiều cao cố định mới cho ảnh */
+    }
+
+    .leader-card-content {
+        padding: 24px;
+        /* Tăng padding khi xếp chồng */
+    }
+
+    .leader-quote {
+        -webkit-line-clamp: 10;
+        /* Cho phép nhiều dòng hơn */
+    }
+}
+/* =================================================================
+   SECTION BAN CỐ VẤN (ADVISORY BOARD)
+   ================================================================= */
+.advisory-board-section {
+    background: white;
+    padding: 64px;
+    overflow: hidden;
+}
+
+.advisory-board-section .section-header {
+    margin-bottom: 20px; /* 'gap: 20px' */
+}
+
+/* Wrapper cho Carousel */
+.advisor-carousel-wrapper {
+    position: relative;
+    min-height: 302px; 
+    width: 100%;
+    max-width: 628px;
+    margin-left: 118px;
+    margin-right: 118px;
+}
+
+/* Dấu ngoặc kép trang trí "“" */
+.advisor-quote-icon {
+    position: absolute;
+    top: 0;
+    left: 48px; 
+    width: 143px;
+}
+
+/* Nội dung slide */
+.carousel-inner {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px; 
+    padding-left: 109px;
+    min-height: 302px;
+}
+
+.advisor-quote-text {
+    width: 100%;
+    max-width: 499px; /* 'width: 499px' */
+    color: #111826; 
+    font-size: 18px; 
+    font-family: 'Reddit Sans', sans-serif; 
+    font-weight: 400; 
+    line-height: 1.2; /* '21.60px' */
+}
+
+.advisor-quote-author {
+    width: 100%;
+    max-width: 499px; /* 'width: 499px' */
+    color: #9C9CA1; 
+    font-size: 16px; 
+    font-family: 'Reddit Sans', sans-serif; 
+    font-weight: 400; 
+    line-height: 1.2; /* '19.20px' */
+    margin-top: 20px; /* 'gap: 20px' */
+}
+
+
+/* Điều hướng (Nút + Chấm) */
+.carousel-navigation {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* 'gap: 12px' */
+    
+    /* 'left: 170px; top: 246px;' 
+       (Chúng ta dùng padding-top thay cho top)
+    */
+    padding-left: 109px; /* Căn lề giống text */
+    margin-top: 20px; /* Đẩy xuống dưới author */
+}
+
+/* Nút bấm (Trái/Phải) */
+.carousel-nav-btn {
+    width: 44px; 
+    height: 44px; 
+    background: #F8F8F8; 
+    border-radius: 4px; 
+    border: 1px solid #F8F8F8;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: #676767;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.carousel-nav-btn:hover {
+    background: #EAEAEA;
+    color: #111826;
+}
+
+/* Dấu chấm (Bootstrap Indicators) */
+.carousel-indicators {
+    /* Reset style mặc định của Bootstrap */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    
+    /* Style từ Figma (flex, 10 chấm) */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa các chấm */
+}
+
+.carousel-indicators [data-bs-target] {
+    /* Reset style mặc định của Bootstrap */
+    width: auto;
+    height: auto;
+    text-indent: -999px;
+    border: none;
+    background: none;
+    padding: 4px; /* Vùng click lớn hơn */
+    
+    /* Style cái chấm bên trong */
+    display: block;
+    width: 4px; /* 'width: 4px' */
+    height: 4px; /* 'height: 4px' */
+    background: #BBBBBB; /* Màu chấm inactive */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active[data-bs-target] {
+    /* Style chấm active (Figma) */
+    width: 8px;
+    height: 8px;
+    background: #2930B9; /* Màu chấm active */
+    padding: 0; /* Reset padding cho active */
+}
+
+
+/* Cột phải (Ảnh) */
+.advisor-image-wrapper {
+    display: flex;
+    justify-content: center; /* Căn giữa trên tablet */
+}
+
+.advisor-image {
+    width: 302px;
+    height: 302px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    /* Xếp chồng 2 cột */
+    .advisory-board-section .row {
+        gap: 40px;
+    }
+    .advisor-carousel-wrapper {
+        margin: 0 auto; /* Căn giữa slider */
+    }
+    .advisor-image-wrapper {
+        justify-content: center; /* Căn giữa ảnh */
+    }
+}
+@media (max-width: 767.98px) {
+    .carousel-inner {
+        padding-top: 60px;
+        padding-left: 20px; /* Giảm padding trên mobile */
+    }
+    .advisor-quote-icon {
+        left: 0;
+        font-size: 120px;
+    }
+    .carousel-navigation {
+        padding-left: 20px; /* Giảm padding trên mobile */
+    }
+}
+/* =================================================================
+   SECTION ĐỘI NGŨ NÒNG CỐT (CORE TEAM)
+   ================================================================= */
+.core-team-section {
+    /* Nền xám nhạt (từ thiết kế) */
+    background-color: #FFFFFF; 
+    padding: 32px 64px;
+}
+
+.core-team-section .section-header {
+    margin-bottom: 48px; 
+}
+
+/* Thẻ (Card) nhân sự */
+.team-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E4E4E7;
+    overflow: hidden; /* Để bo góc img */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.team-card-image {
+    line-height: 0; /* Xóa khoảng trắng thừa */
+}
+
+.team-card-image img {
+    width: 100%;
+    height: 250px; /* Chiều cao tùy chỉnh cho ảnh */
+    object-fit: cover;
+}
+
+.team-card-content {
+    /* Padding '16' (4rem) */
+    padding: 16px; 
+}
+
+.team-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #09090B;
+    margin-bottom: 4px;
+}
+
+.team-card-name {
+    font-size: 14px;
+    color: #52525B;
+    margin-bottom: 2px;
+}
+
+.team-card-role {
+    font-size: 12px;
+    color: #9C9CA1;
+    margin-bottom: 0;
+}
+/* =================================================================
+   SECTION NỀN TẢNG (PLATFORM)
+   ================================================================= */
+.platform-section {
+    background: #FFFFFF;
+    padding: 64px ; 
+}
+
+.platform-section .section-header {
+    margin-bottom: 24px;
+}
+
+.platform-description {
+    font-size: 16px;
+    color: #52525B;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* 1. Biểu đồ tròn (Charts) */
+.progress-charts-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px; /* Khoảng cách giữa các biểu đồ */
+}
+
+.progress-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa biểu đồ và nhãn */
+}
+
+.chart-circle {
+    /* Biến --p (percentage) được truyền từ style inline */
+    --p: 0; 
+    /* Màu nền (màu active) */
+    --c: #1A4173; 
+    /* Màu nền (màu inactive) */
+    --b: #E4E4E7; 
+    --w: 80px; /* Chiều rộng */
+    --t: 8px;  /* Độ dày */
+
+    width: var(--w);
+    height: var(--w);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Kỹ thuật Conic Gradient cho biểu đồ tròn */
+    background: radial-gradient(
+            farthest-side, 
+            white calc(100% - var(--t)), /* Lỗ rỗng ở giữa (trắng) */
+            transparent 0
+        ),
+        conic-gradient(
+            var(--c) calc(var(--p) * 1%), /* Phần trăm màu active */
+            var(--b) 0 /* Phần còn lại màu inactive */
+        );
+}
+
+.chart-percentage {
+    font-size: 18px;
+    font-weight: 600;
+    color: #09090B;
+}
+
+.chart-label {
+    font-size: 14px;
+    color: #52525B;
+}
+
+/* 2. Khối hình ảnh (Phải) */
+.platform-images-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa 2 ảnh */
+}
+
+.platform-image-1,
+.platform-image-2 {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Ảnh 1 (Lớn) */
+.platform-image-1 {
+    width: 300px;
+    height: 450px;
+}
+
+/* Ảnh 2 (Nhỏ) */
+.platform-image-2 {
+    width: 250px;
+    height: 380px;
+    margin-top: -50px; /* Tạo hiệu ứng lệch */
+}
+
+/* 3. Responsive */
+@media (max-width: 991.98px) {
+    /* Xếp chồng 2 cột */
+    .platform-content {
+        margin-bottom: 48px;
+    }
+    .platform-images-wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .progress-charts-container {
+        /* Xếp chồng 3 biểu đồ */
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .platform-images-wrapper {
+        /* Xếp chồng 2 ảnh */
+        flex-direction: column;
+        gap: 24px;
+    }
+    .platform-image-1,
+    .platform-image-2 {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-top: 0;
+    }
+}
