@@ -1,6 +1,5 @@
-.navbar-header{
-    padding: 0 64px;
-}
+
+
 
 body {
   font-family: 'Reddit Sans', sans-serif;
@@ -12,10 +11,13 @@ h1, h2, h3 {
   font-weight: 700; 
 }
 
-/* Hoặc cho đoạn văn bản thông thường */
 p {
   font-family: 'Reddit Sans', sans-serif;
-  font-weight: 400; /* Ví dụ: độ đậm 400 (regular) */
+  font-weight: 400; 
+}
+
+.navbar-header{
+    padding: 6px 64px;
 }
 /* logo */
 .nav-header .navbar-brand{
@@ -36,7 +38,7 @@ p {
 .nav-header .nav-link.active::after {
   content: "";
   position: absolute;
-  bottom: -12px; /* sát với border của nav-header */
+  bottom: -13px; 
   left: 0;
   width: 100%;
   height: 2px;
@@ -74,6 +76,26 @@ p {
   transform: rotate(180deg) !important;
 }
 
+.nav-header .menu-header:hover{
+    background-color: #E9EEF6;
+}
+.nav-header .menu-header:hover .item h4{
+  color: #1A4173;
+}
+@media (max-width: 768px) {
+  .navbar-header{
+    padding: 6px 0;
+}
+.nav-header .nav-link.active::after {
+  bottom: 1px; 
+}
+.nav-header .dropdown-menu-header{
+    width: auto;
+}
+.nav-header .navbar-collapse{
+  border-top: 2px solid #E4E4E7;
+}
+}
 
 /* tìm kiếm */
 .form-search{
@@ -98,4 +120,13 @@ p {
    background-color: white;
    border: 1px solid #E4E4E7;
    border-radius: 6px;
+}
+
+.nav-header .language-dropdown .dropdown-item{
+  border-radius: 6px;
+}
+
+.nav-header .language-dropdown .dropdown-item:hover{
+  background-color: #E9EEF6;
+  color: #1A4173;
 }
