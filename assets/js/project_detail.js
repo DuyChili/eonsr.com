@@ -1,30 +1,52 @@
 // Đợi DOM tải xong
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Lấy thanh tiến trình
+    // Lấy các phần tử cần thiết
     const progressBar = document.getElementById("scrollProgressBar");
+    const header = document.querySelector('.navbar-header');
+    const subnavDesktop = document.querySelector('.project-subnav');
+    const subnavMobile = document.querySelector('.project-subnav-mobile');
+
+    if (!header) {
+        console.error("Không tìm thấy '.navbar-header'");
+        return;
+    }
+
+    // (KHÔNG CẦN 'lastScrollTop' hay 'headerHeight' cho logic mới này)
 
     // Lắng nghe sự kiện cuộn (scroll)
     window.addEventListener("scroll", function() {
         
-        // 1. Tính toán khoảng cách đã cuộn
-        // (Khoảng cách từ đỉnh trang xuống vị trí hiện tại)
         let scrollTop = window.scrollY || document.documentElement.scrollTop;
         
-        // 2. Tính toán tổng chiều cao có thể cuộn
-        // (Tổng chiều cao nội dung - chiều cao màn hình)
-        let scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        // --- LOGIC MỚI: CHỈ HIỆN HEADER KHI Ở TRÊN CÙNG ---
         
-        // Tránh lỗi chia cho 0 nếu nội dung không đủ dài
-        if (scrollableHeight === 0) {
-            progressBar.style.width = '0%';
-            return;
-        }
+        // Đặt một ngưỡng nhỏ (ví dụ: 10px) để tránh lỗi
+        if (scrollTop > 10) { 
+            // Đang cuộn (không ở trên cùng): Ẩn Header, Đẩy Subnav lên
+            header.classList.add('header-hidden');
+            
+            if (subnavDesktop) subnavDesktop.classList.add('subnav-sticky-top');
+            if (subnavMobile) subnavMobile.classList.add('subnav-sticky-top');
 
-        // 3. Tính tỷ lệ phần trăm đã cuộn
-        let scrollPercentage = (scrollTop / scrollableHeight) * 100;
+        } else {
+            // Đã ở trên cùng: Hiện Header, Hạ Subnav xuống
+            header.classList.remove('header-hidden');
+            
+            if (subnavDesktop) subnavDesktop.classList.remove('subnav-sticky-top');
+            if (subnavMobile) subnavMobile.classList.remove('subnav-sticky-top');
+        }
         
-        // 4. Cập nhật chiều rộng (width) của thanh tiến trình
-        progressBar.style.width = scrollPercentage + '%';
+        // --- LOGIC THANH TIẾN TRÌNH (GIỮ NGUYÊN) ---
+        if (progressBar) {
+            let scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            
+            if (scrollableHeight === 0) {
+                progressBar.style.width = '0%';
+            } else {
+                let scrollPercentage = (scrollTop / scrollableHeight) * 100;
+                progressBar.style.width = scrollPercentage + '%';
+            }
+        }
     });
 });

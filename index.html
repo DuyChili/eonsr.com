@@ -6,29 +6,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EONSR - Tái định nghĩa chuyển đổi số</title>
 
-    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Google Fonts: Reddit Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome CDN for Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Your Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
+
 </head>
 
 <body>
-    <!-- =================================================================
-         HERO SECTION (FULL HEIGHT BANNER)
-         ================================================================= -->
+    <header>
+        <nav class="navbar-header navbar navbar-expand-md navbar-white bg-white nav-header fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img height="50"
+                        src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt="" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse pt-2 navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3" href="javascript:void(0)">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Đối tác
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="/partner.html">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Microsoft</h4>
+                                                    <p class="content mb-0">A set of layered sections of content–known
+                                                        as the tab panels–that are...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">OpenAI</h4>
+                                                    <p class="content mb-0">A popup that displays information related to
+                                                        an element when the...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Dịch vụ
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="project.html">Dự án</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="javascript:void(0)">Bản tin</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <form class="d-flex me-auto">
+                            <div class="form-search">
+                                <a href="#"><img height="20" src="assets/images/search.png" alt=""></a>
+                                <input class="form-control-header me-2" type="text" placeholder="Tìm kiếm....">
+                            </div>
+                        </form>
+                        <div class="dropdown language-dropdown ms-3">
+                            <button class="d-flex align-items-center gap-2 dropdown-icon-menu" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://flagcdn.com/w20/vn.png" alt="VN">
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu shadow-sm p-2 mt-3">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                        <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                        <img src="https://flagcdn.com/w20/us.png" alt="EN"> Tiếng Anh
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <section class="hero-section">
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
@@ -42,18 +208,14 @@
                     </div>
 
                     <div class="pt-5 border-top-custom">
-                        <a href="#" class="btn btn-light btn-about">Về chúng tôi</a>
+                        <a href="about.html" class="btn btn-light btn-about">Về chúng tôi</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =================================================================
-     PARTNERS SECTION (WITH YOUR EXACT PADDING REQUIREMENTS)
-     ================================================================= -->
     <section class="partners-section">
-        <!-- Full-Width Header Wrapper -->
         <div class="section-header-wrapper">
             <div class="section-header">
                 <h2 class="section-title">Đối tác của EONSR</h2>
@@ -66,10 +228,8 @@
             </div>
         </div>
 
-        <!-- Logo Grid Wrapper (with 230px side padding) -->
         <div class="logo-grid-container">
             <div class="row g-3">
-                <!-- Row 1 -->
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="partner-logo-box"><img src="assets/images/logo_gemini.jpg" alt="Octane Fitness Logo">
                     </div>
@@ -85,7 +245,6 @@
                     <div class="partner-logo-box"><img src="assets/images/logo_microsoft.jpg" alt="True Logo"></div>
                 </div>
 
-                <!-- Row 2 -->
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="partner-logo-box"><img src="assets/images/logo_odoo.jpg" alt="Cybex Logo"></div>
                 </div>
@@ -99,7 +258,6 @@
                     <div class="partner-logo-box"><img src="assets/images/logo_merkle.jpg" alt="Cybex Logo"></div>
                 </div>
 
-                <!-- Row 3 -->
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="partner-logo-box"><img src="assets/images/logo_merkle.jpg" alt="Octane Fitness Logo">
                     </div>
@@ -118,12 +276,8 @@
         </div>
     </section>
 
-    <!-- =================================================================
-     SERVICES SECTION (WITH UPDATED TEXT STYLE)
-     ================================================================= -->
     <section class="services-section">
         <div class="container">
-            <!-- Section Header -->
             <div class="row justify-content-center text-center">
                 <div class="col-lg-7">
                     <div class="section-header">
@@ -136,10 +290,8 @@
                 </div>
             </div>
 
-            <!-- Main Content Grid (Using Flexbox for precise spacing) -->
             <div class="service-flex-wrapper">
 
-                <!-- Item 1: Service Tabs Navigation -->
                 <div class="service-tabs-nav-wrapper">
                     <div class="service-tabs-nav">
                         <a href="#" class="service-tab active" data-tab="content-data"><i class="fas fa-cloud"></i>
@@ -155,15 +307,12 @@
                     </div>
                 </div>
 
-                <!-- Item 2: Image -->
                 <div class="service-image" id="service-display-image"
                     style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071');">
                 </div>
 
-                <!-- Item 3: Service Content -->
                 <div class="service-content-main-wrapper">
                     <div class="service-content-wrapper">
-                        <!-- Content 1: Data -->
                         <div class="service-content active" id="content-data"
                             data-image="https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=2070">
                             <h3 class="service-content-title">Dữ liệu</h3>
@@ -171,7 +320,6 @@
                                 thế giới để biến ý tưởng của doanh nghiệp thành giá trị số bền vững.</p>
                         </div>
 
-                        <!-- Content 2: AI -->
                         <div class="service-content" id="content-ai"
                             data-image="https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=2070">
                             <h3 class="service-content-title">AI với thời đại mới</h3>
@@ -179,7 +327,6 @@
                                 đoán và tạo ra những đột phá mới cho doanh nghiệp của bạn.</p>
                         </div>
 
-                        <!-- Content 3: Digital Transformation -->
                         <div class="service-content" id="content-digital"
                             data-image="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084">
                             <h3 class="service-content-title">Chuyển đổi số</h3>
@@ -187,7 +334,6 @@
                                 chiến lược đến triển khai các giải pháp công nghệ tiên tiến.</p>
                         </div>
 
-                        <!-- Content 4: Creative Content -->
                         <div class="service-content" id="content-creative"
                             data-image="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070">
                             <h3 class="service-content-title">Sáng tạo nội dung</h3>
@@ -195,7 +341,6 @@
                                 bạn kết nối hiệu quả với khách hàng mục tiêu.</p>
                         </div>
 
-                        <!-- Content 5: Training -->
                         <div class="service-content" id="content-training"
                             data-image="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071">
                             <h3 class="service-content-title">Đào tạo</h3>
@@ -208,12 +353,8 @@
         </div>
     </section>
 
-    <!-- =================================================================
-     PROJECTS SECTION (FULLY REFACTORED WITH REUSABLE CARD)
-     ================================================================= -->
     <section class="projects-section">
         <div class="projects-section-wrapper">
-            <!-- Section Header -->
             <div class="row align-items-center">
                 <div class="col">
                     <div class="section-header">
@@ -235,9 +376,7 @@
                 </div>
             </div>
 
-            <!-- Projects Grid -->
             <div class="row g-4">
-                <!-- Column 1: Large Card -->
                 <div class="col-lg-6">
                     <article class="project-card project-card--large"
                         style="background-image: url('assets/image/plane.jpg');">
@@ -251,10 +390,8 @@
                     </article>
                 </div>
 
-                <!-- Column 2: Nested Smaller Cards -->
                 <div class="col-lg-6">
                     <div class="row g-4">
-                        <!-- Inner Column 1: Two Stacked Cards -->
                         <div class="col-md-6 d-flex flex-column">
                             <article class="project-card flex-grow-1 mb-4"
                                 style="background-image: url('assets/image/dawn.jpg');">
@@ -281,7 +418,6 @@
                             </article>
                         </div>
 
-                        <!-- Inner Column 2: Tall Card -->
                         <div class="col-md-6">
                             <article class="project-card project-card--tall"
                                 style="background-image: url('https://cdn.britannica.com/69/228369-050-0B18A1F6/Asian-Cup-Final-2019-Hasan-Al-Haydos-Qatar-Japan-Takumi-Minamino.jpg');">
@@ -301,9 +437,6 @@
         </div>
     </section>
 
-    <!-- =================================================================
-     LATEST NEWS SECTION (Refactored with Background Images)
-     ================================================================= -->
     <section class="news-section">
         <div class="news-section-wrapper">
 
@@ -393,11 +526,7 @@
         </div>
     </section>
 
-    <!-- =================================================================
-     PRESS RELATIONS SECTION
-     ================================================================= -->
     <section class="press-section">
-        <!-- Section Header -->
         <div class="section-header-wrapper">
             <div class="section-header">
                 <h2 class="section-title">Đối tác của EONSR</h2>
@@ -410,9 +539,7 @@
             </div>
         </div>
         <div class="press-section-wrapper">
-            <!-- Press Cards Grid -->
             <div class="row g-4">
-                <!-- Top-Left Large Card -->
                 <div class="col-lg-6">
                     <article class="press-card press-card--large"
                         style="background-image: url('https://cdn.tienphong.vn/images/11371a0e411b1c19f4e6d81a04045063cda36f08589115b878af02122855dfad2e0391a1cede72c8e86d95a909bdca637d87ef7bf618e445ef66321d1021292866154d174175ae7d8816f06b2e5a0477/anh-man-hinh-2025-11-05-luc-151917.png');">
@@ -426,11 +553,9 @@
                     </article>
                 </div>
 
-                <!-- Top-Right Two Small Cards -->
                 <div class="col-lg-6">
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <!-- Small card now uses a background-image style -->
                             <article class="press-card press-card--small"
                                 style="background-image: url('https://img.cand.com.vn/resize/800x800/NewFiles/Images/2025/11/01/image001-1761959280130.jpg');">
                                 <div class="press-card__content">
@@ -444,7 +569,6 @@
                             </article>
                         </div>
                         <div class="col-md-6">
-                            <!-- Small card now uses a background-image style -->
                             <article class="press-card press-card--small"
                                 style="background-image: url('https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2025/11/5/base64-17623291562971287808958.jpeg');">
                                 <div class="press-card__content">
@@ -460,7 +584,6 @@
                     </div>
                 </div>
 
-                <!-- Bottom-Left Large Card -->
                 <div class="col-lg-6">
                     <article class="press-card press-card--large"
                         style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070');">
@@ -474,7 +597,6 @@
                     </article>
                 </div>
 
-                <!-- Bottom-Right Large Card -->
                 <div class="col-lg-6">
                     <article class="press-card press-card--large"
                         style="background-image: url('https://cdn.britannica.com/69/228369-050-0B18A1F6/Asian-Cup-Final-2019-Hasan-Al-Haydos-Qatar-Japan-Takumi-Minamino.jpg');">
@@ -489,7 +611,6 @@
                 </div>
             </div>
 
-            <!-- Load More Button -->
             <div class="row mt-5">
                 <div class="col-12 text-center">
                     <a href="#" class="btn btn-load-more">Hiển thị thêm</a>
@@ -497,9 +618,7 @@
             </div>
         </div>
     </section>
-    <!-- =================================================================
-     FOOTER SECTION
-     ================================================================= -->
+    
     <footer class="site-footer">
         <div class="footer-container-main">
 
@@ -569,7 +688,6 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/assets/js/homepage.js"></script>
 

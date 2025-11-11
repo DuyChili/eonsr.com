@@ -4,7 +4,7 @@
 
 body.project-detail-page-body {
     font-family: 'Reddit Sans', sans-serif;
-    background-color: #F8F9FA;
+    background-color: #FFFFFF;
 }
 
 /* =================================================================
@@ -14,7 +14,7 @@ body.project-detail-page-body {
     background-color: #FFFFFF;
     border-bottom: 1px solid #E4E4E7;
     position: sticky;
-    top: 0;
+    top: 64px;
     z-index: 1020;
 }
 
@@ -136,6 +136,7 @@ body.project-detail-page-body {
    ================================================================= */
 .project-hero-section {
     background-color: #FFFFFF;
+    margin-top: 64px;
 }
 
 /* Container (Căn giữa, 984px) */
@@ -793,4 +794,50 @@ body.project-detail-page-body {
 .styles-buttons .nav-pills .nav-link.active {
     color: #FFFFFF;
     background-color: #1A4173;
+}
+/* =================================================================
+   BỔ SUNG CHO JS ẨN/HIỆN HEADER KHI CUỘN
+   ================================================================= */
+
+/* Thêm transition mượt mà cho header */
+.navbar-header {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Class JS sẽ thêm vào để ẩn header */
+.navbar-header.header-hidden {
+    transform: translateY(-100%);
+}
+/* =================================================================
+   BỔ SUNG CHO JS ĐẨY SUBNAV LÊN TOP 0
+   ================================================================= */
+
+.project-subnav {
+    background-color: #FFFFFF;
+    
+    /* === YÊU CẦU MỚI: ẨN "CHÂN" === */
+    border-bottom: none; /* SỬA TỪ '1px solid #E4E4E7' */
+    
+    position: sticky;
+    top: 64px; /* Vị trí mặc định khi header hiển thị */
+    z-index: 1020;
+    transition: top 0.3s ease-in-out;
+}
+
+/* Class mới để đẩy subnav desktop lên top 0 */
+.project-subnav.subnav-sticky-top {
+    top: 0;
+}
+
+/* Sửa lỗi cho subnav mobile (hiện đang là top: 0, 
+   nó phải là 64px khi header hiển thị) 
+*/
+.project-subnav-mobile.accordion {
+    top: 64px; /* SỬA TỪ 0 THÀNH 64px */
+    transition: top 0.3s ease-in-out; /* Thêm transition */
+}
+
+/* Class mới để đẩy subnav mobile lên top 0 */
+.project-subnav-mobile.accordion.subnav-sticky-top {
+    top: 0;
 }
