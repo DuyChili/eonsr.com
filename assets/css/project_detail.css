@@ -279,31 +279,57 @@ body.project-detail-page-body {
     margin-top: 40px;
 }
 
+/* =================================================================
+   SỬA NÚT "ĐỌC BẢN TÓM TẮT" VÀ TRẠNG THÁI CLICK (SHOW)
+   ================================================================= */
+
+/* 1. TRẠNG THÁI MẶC ĐỊNH (NỀN XANH, CHỮ TRẮNG) */
 .btn-summary {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    background: #1A4173;
+    gap: 10px; 
+    padding: 12px 16px; 
+    
+    background: #1A4173; /* Nền xanh */
+    color: #F4F4F4; /* Chữ trắng */
+    border: 1px solid #1A4173; /* Thêm border để kích thước không nhảy */
+    
     border-radius: 8px;
-    color: #F4F4F4;
-    font-size: 16px;
-    font-family: 'Reddit Sans', sans-serif;
-    font-weight: 500;
+    font-size: 16px; 
+    font-family: 'Reddit Sans', sans-serif; 
+    font-weight: 500; 
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.2s ease-in-out; /* Sửa transition */
 }
 
+/* 2. HOVER KHI CHƯA CLICK (NỀN XANH ĐẬM) */
 .btn-summary:hover {
     background: #14335a;
+    border-color: #14335a;
     color: #F4F4F4;
 }
 
+/* 3. TRẠNG THÁI ĐÃ CLICK (KHI DROPDOWN MỞ) */
+/* (NỀN TRẮNG, CHỮ XANH, VIỀN XANH) */
+.btn-summary.show,
+.btn-summary[aria-expanded="true"] {
+    background: #FFFFFF;
+    color: #1A4173;
+    border: 1px solid #1A4173;
+}
+
+/* 4. HOVER KHI ĐÃ CLICK (NỀN XANH NHẠT) */
+.btn-summary.show:hover,
+.btn-summary[aria-expanded="true"]:hover {
+    background: #F0F4F9; /* Nền xanh nhạt */
+    color: #1A4173;
+    border-color: #1A4173;
+}
+
+/* Style cho icon (đảm bảo icon đổi màu theo chữ) */
 .btn-summary i {
     font-size: 14px;
-    color: inherit;
-    /* SỬA: Thêm transition để xoay mượt */
-    transition: transform 0.3s ease;
+    color: inherit; /* Kế thừa màu từ nút cha */
 }
 
 /* SỬA: Thêm khối mới này để xoay icon khi click */
