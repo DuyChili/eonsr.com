@@ -1,0 +1,60 @@
+.about-hero-section {
+    background: white;
+}
+
+.about-hero-container {
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 42px;
+    padding-bottom: 64px;
+}
+
+.about-hero-text {
+    /* 'width: 620px' từ Figma */
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* 'gap: 16px' */
+}
+
+.about-hero-title {
+    color: #1A4173;
+    font-size: 28px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    /* '33.60px' */
+    margin: 0;
+}
+
+/* 5. Mô tả */
+.about-hero-description {
+    color: #71717A;
+    font-size: 18px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    /* '21.60px' */
+    margin: 0;
+}
+
+/* 7. Responsive */
+@media (max-width: 767.98px) {
+    .about-hero-container {
+        padding: 32px 24px;
+        /* Giảm padding */
+    }
+
+    .about-hero-text {
+        max-width: 100%;
+        text-align: center;
+        /* Căn giữa text */
+    }
+
+    .about-hero-avatar {
+        justify-content: center;
+        /* Căn giữa avatar */
+        margin-top: 24px;
+    }
+}
