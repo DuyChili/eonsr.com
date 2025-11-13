@@ -1,0 +1,247 @@
+body.chat-page-body {
+    font-family: 'Reddit Sans', sans-serif;
+    background-color: #FFFFFF; 
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+}
+
+/* =================================================================
+   TRẠNG THÁI 1: MÀN HÌNH CHÀO MỪNG
+   ================================================================= */
+.chat-welcome-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px; 
+    gap: 24px;
+}
+
+.chat-welcome-content {
+    flex: 1 1 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px; 
+    padding-bottom: 16px;
+    gap: 32px; 
+}
+
+.chat-logo {
+    width: 200px; 
+    height: 200px; 
+}
+
+.chat-welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; 
+}
+.chat-welcome-text .line-1 {
+    color: #1A4173; 
+    font-size: 18px; 
+    font-family: 'Reddit Sans', sans-serif; 
+    font-weight: 600; 
+}
+.chat-welcome-text .line-2 {
+    color: #1A4173; 
+    font-size: 18px; 
+    font-family: 'IBM Plex Sans', sans-serif; 
+    font-style: italic; 
+    font-weight: 600; 
+}
+
+.btn-go-home {
+    display: inline-flex;
+    padding: 8px 12px;
+    background: white; 
+    border-radius: 6px; 
+    border: 1px solid #1A4173; 
+    align-items: center; 
+    gap: 6px; 
+    text-decoration: none;
+    color: #1A4173; 
+    font-size: 14px; 
+    font-family: 'Inter', sans-serif; 
+    font-weight: 500; 
+    transition: all 0.2s ease-in-out;
+}
+.btn-go-home i { font-size: 12px; }
+.btn-go-home:hover {
+    background: #1A4173;
+    color: white;
+}
+
+/* =================================================================
+   TRẠNG THÁI 2: GIAO DIỆN CHAT
+   ================================================================= */
+.chat-interface-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFFFFF; /* Nền trắng cho khung chat chính */
+}
+
+/* 2a. Sidebar (Trái) */
+.chat-sidebar {
+    width: 20%;
+    min-width: 280px;
+    background-color: #FFFFFF; 
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-right: 1px solid #E0E0E0;
+}
+
+.chat-sidebar-logo {
+    width: 100px; /* Logo nhỏ hơn */
+    height: auto;
+}
+
+.btn-go-home-sidebar:hover {
+    background: #FFFFFF;
+    border-color: #1A4173;
+}
+
+/* 2b. Khung Chat (Phải) */
+.chat-main-area {
+   flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 40px 64px;
+}
+
+/* Lịch sử chat (Tự cuộn) */
+.chat-history-scroll {
+    flex-grow: 1; /* Đẩy thanh input xuống */
+    overflow-y: auto;
+    padding: 24px;
+}
+
+/* Các bong bóng chat */
+.chat-message {
+    display: flex;
+    margin-bottom: 16px;
+}
+.chat-bubble {
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+/* Tin nhắn của User (Phải) */
+.chat-message.user {
+    justify-content: flex-end;
+}
+.chat-message.user .chat-bubble {
+    background-color: #F3F4F6; /* Màu xám nhạt (hi!) */
+    color: #1F2937;
+}
+
+/* Tin nhắn của AI (Trái) */
+.chat-message.ai {
+    justify-content: flex-start;
+}
+.chat-message.ai .chat-bubble {
+    background-color: #FFFFFF; /* Nền trắng */
+    color: #374151;
+    /* (Thiết kế không có border, nếu muốn, thêm: border: 1px solid #E0E0E0;) */
+}
+
+
+/* =================================================================
+   THANH NHẬP LIỆU (Chung cho cả 2 trạng thái)
+   ================================================================= */
+.chat-input-bar {
+    flex-shrink: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* SỬA: Nền của thanh input bar khớp với nền cha */
+    background-color: transparent;
+    padding-top: 12px; /* Thêm padding-top để tách biệt */
+}
+
+.chat-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end; 
+    
+    width: 100%;
+    max-width: 758px; 
+    min-height: 108px; /* SỬA: Dùng min-height thay vì height */
+    
+    background: white;
+    box-shadow: 0px 2.18px 6px rgba(0, 0, 0, 0.10); 
+    border-radius: 12px; 
+    border: 1px solid #E4E4E7; 
+    padding: 14px 16px; 
+    gap: 24px; 
+}
+
+.chat-textarea {
+    flex: 1 1 0; 
+    align-self: stretch; 
+    
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 8px 0 0 0; /* SỬA: Thêm padding-top nhỏ để text căn giữa hơn */
+    margin: 0;
+    
+    color: #374151; /* Đổi màu chữ gõ */
+    font-size: 16px; 
+    font-family: 'Reddit Sans', sans-serif; 
+    font-weight: 400; 
+    
+    resize: none; 
+    overflow-y: auto; 
+    
+    background-color: transparent;
+    
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE và Edge */
+}
+.chat-textarea::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.chat-textarea::placeholder {
+    color: #71717A;
+}
+.chat-textarea:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.chat-send-btn {
+    width: 36px; 
+    height: 36px;
+    padding: 8px 12px; 
+    background: #E9EEF6;
+    border-radius: 6px; 
+    color: #1A4173;
+    font-size: 14px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: none;
+    transition: background-color 0.2s ease;
+    
+    /* SỬA: Căn nút gửi ở dưới cùng */
+    align-self: flex-end;
+    margin-bottom: 4px; /* Tinh chỉnh vị trí */
+}
+
+.chat-send-btn:hover {
+    background: #DCE5F2; 
+    color: #1A4173;
+}
