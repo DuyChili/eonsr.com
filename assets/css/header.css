@@ -130,3 +130,57 @@ p {
   background-color: #E9EEF6;
   color: #1A4173;
 }
+
+/* header mobile */
+.nav-header-mobile {
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+}
+.nav-header-mobile .navbar-toggler,
+.nav-header-mobile .btn {
+    border: none;
+    font-size: 1.5rem; /* Tăng kích thước icon */
+}
+.nav-header-mobile .navbar-toggler:focus,
+.nav-header-mobile .btn:focus {
+    box-shadow: none;
+}
+.nav-header-mobile .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Mobile Search View Style */
+#nav-search-view .form-search-mobile {
+  width: 300px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 1rem;
+    border: 1px solid #E4E4E7;
+    border-radius: 6px;
+    padding: 0 6px;
+}
+#nav-search-view .form-control {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+#nav-search-view .form-control:focus {
+    box-shadow: none;
+}
+
+/* =================================== */
+/* RESPONSIVE CŨ */
+/* =================================== */
+@media (max-width: 768px) {
+  .nav-header{
+    /* Ẩn hoàn toàn header desktop trên mobile */
+    display: none;
+  }
+}
+
+
+
+
