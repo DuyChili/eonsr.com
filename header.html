@@ -24,7 +24,7 @@
         <!-- ============================================ -->
         <!-- HEADER CHO DESKTOP -->
         <!-- ============================================ -->
-        <nav class="navbar-header navbar navbar-expand-md navbar-white bg-white nav-header fixed-top d-none d-md-flex">
+        <nav class="navbar-header header navbar navbar-expand-md navbar-white bg-white nav-header fixed-top d-none d-md-flex">
             <div class="container-fluid">
                 <a class="navbar-brand" href="javascript:void(0)"><img height="50"
                         src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt=""></a>
@@ -95,8 +95,53 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="javascript:void(0)">Dịch vụ</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Dịch vụ
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link px-3" href="javascript:void(0)">Dự án</a>
@@ -124,7 +169,7 @@
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu shadow-sm p-2 mt-3">
                                 <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                    <a class="dropdown-item active d-flex align-items-center gap-2" href="#">
                                         <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
                                     </a>
                                 </li>
@@ -144,93 +189,163 @@
         <!-- ============================================ -->
         <!-- HEADER CHO MOBILE -->
         <!-- ============================================ -->
-        <nav class="nav-header-mobile navbar bg-white fixed-top d-md-none">
-            <div class="container-fluid">
+        <nav class="nav-header-mobile header navbar bg-white fixed-top d-md-none">
+            <div class="container-fluid nav-mobile">
                 <div class="d-flex w-100 justify-content-between align-items-center" id="nav-default-view">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    <button class="navbar-toggler navbar-header-mb" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand" href="#"><img height="40"
                             src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt=""></a>
-                    <button class="btn p-0" id="search-toggle-btn">
+                    <button class="btn p-2 mt-2" id="search-toggle-btn">
                         <span class="material-symbols-outlined">search</span>
                     </button>
+                    <div class="dropdown language-dropdown ms-3">
+                        <button class="d-flex align-items-center gap-2 dropdown-icon-menu" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://flagcdn.com/w20/vn.png" alt="VN">
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="none" viewBox="0 0 16 16">
+                                <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu shadow-sm p-2 mt-3">
+                            <li>
+                                <a class="dropdown-item d-flex active align-items-center gap-2" href="#">
+                                    <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="EN"> Tiếng Anh
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-                <!-- Search View -->
-                <div class="d-none w-100 justify-content-between align-items-center" id="nav-search-view">
-                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <div class="d-none w-100 align-items-center justify-content-center" id="nav-search-view">
+                    <button class="navbar-toggler navbar-header-mb" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <form class="form-search-mobile" role="search">
                         <span class="material-symbols-outlined">search</span>
-                        <input class="form-control" type="search" placeholder="Find an article..."
-                            aria-label="Search">
+                        <input class="form-control" type="search" placeholder="Find an article..." aria-label="Search">
                     </form>
-                    <button class="btn p-0" id="close-search-btn">
+                    <button class="btn p-2 mt-2 align-items-center" id="close-search-btn">
                         <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
-                
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img height="40" src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt=""></h5>
+                        <a class="navbar-brand" href="#"><img height="40"
+                                src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt=""></a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
+
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="#">Dịch vụ</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="#">Dự án</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Bản tin</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Đối tác
-                                </a>
-                                <ul class="dropdown-menu border-0">
-                                    <li><a class="dropdown-item" href="#">Google</a></li>
-                                    <li><a class="dropdown-item" href="#">Tech X</a></li>
-                                    <li><a class="dropdown-item" href="#">Microsoft</a></li>
-                                    <li><a class="dropdown-item" href="#">Oddo</a></li>
-                                    <li><a class="dropdown-item" href="#">AWS</a></li>
-                                    <li><a class="dropdown-item" href="#">OpenAI</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <hr>
-                         <div class="dropdown language-dropdown mt-3">
-                            <button class="d-flex align-items-center gap-2 dropdown-icon-menu w-100" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
-                                <svg class="dropdown-arrow ms-auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="none" viewBox="0 0 16 16">
-                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu shadow-sm p-2 mt-2 w-100">
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                        <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
-                                    </a>
+                        <div class="offcanvas-panel active" id="main-panel">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Trang chủ</a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
-                                        <img src="https://flagcdn.com/w20/us.png" alt="EN"> Tiếng Anh
-                                    </a>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link has-submenu" href="#"
+                                        data-target-panel="product-news-panel">Đối tác<span
+                                            class="material-symbols-outlined">chevron_right</span></a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link has-submenu" href="#"
+                                        data-target-panel="company-news-panel">Dịch vụ<span
+                                            class="material-symbols-outlined">chevron_right</span></a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Dự án</a>
+                                </li>
+                                 <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Bản tin</a>
                                 </li>
                             </ul>
+                            <hr>
                         </div>
+
+                        <div class="offcanvas-panel" id="product-news-panel">
+                            <div class="panel-header pb-2">
+                                <button class="btn btn-back mt-2" data-target-panel="main-panel">
+                                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                                </button>
+                                <h5 class="nav-link active">Đối tác</h5>
+                            </div>
+                            <hr>
+                            <div class="panel-body">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Google</a>
+                                    </li>
+                                    <hr> 
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Oddo</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Tech X</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">AWS</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Microsoft</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">OpenAI</a>
+                                    </li>
+                                    <hr>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="offcanvas-panel" id="company-news-panel">
+                            <div class="panel-header">
+                                <button class="btn btn-back mt-2" data-target-panel="main-panel">
+                                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                                </button>
+                                <h5 class="nav-link active">Dịch vụ</h5>
+                            </div>
+                            <hr>
+                            <div class="panel-body">
+                                 <ul class="navbar-nav">
+                                   <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Google</a>
+                                    </li>
+                                    <hr> 
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Oddo</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">Tech X</a>
+                                    </li>
+                                    <hr>
+                                    <li class="nav-item ps-4">
+                                        <a class="nav-link " href="#">AWS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="offcanvas-footer">
+                        <button class="btn btn-primary w-100">\\\\\\\\\</button>
                     </div>
                 </div>
             </div>
@@ -238,7 +353,7 @@
     </header>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/header.js" ></script>
+    <script src="assets/js/header.js"></script>
     <script src="script.js"></script>
 </body>
 

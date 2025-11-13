@@ -1,6 +1,3 @@
-
-
-
 body {
   font-family: 'Reddit Sans', sans-serif;
 }
@@ -28,12 +25,17 @@ p {
 .nav-header .nav-link {
     position: relative;
 }
-.nav-header .nav-link.active{
- color: #1A4173;
+.header .nav-link.active{
+ color: #1A4173 !important;
  font-weight: bold;
 }
-.nav-header .nav-link:hover {
-  color: #1A4173;
+.header .nav-link:hover {
+  color: #1A4173 !important;
+}
+.header .offcanvas-footer button{
+  background-color: #1A4173;
+  color: white;
+  border-radius: 6px !important;
 }
 .nav-header .nav-link.active::after {
   content: "";
@@ -66,13 +68,13 @@ p {
   display: none !important;
 }
 
-.nav-header .dropdown-arrow {
+.header .dropdown-arrow {
   display: inline-block;
   transition: transform 0.25s ease;
   transform-origin: center;
 }
 
-.nav-header .dropdown-icon-menu.show .dropdown-arrow {
+.header .dropdown-icon-menu.show .dropdown-arrow {
   transform: rotate(180deg) !important;
 }
 
@@ -115,52 +117,67 @@ p {
 }
 
 /* menu language */
-.nav-header .language-dropdown button{
+.header .language-dropdown button{
     padding-block: 9px;
    background-color: white;
    border: 1px solid #E4E4E7;
    border-radius: 6px;
 }
 
-.nav-header .language-dropdown .dropdown-item{
+.header .language-dropdown .dropdown-item{
   border-radius: 6px;
 }
-
-.nav-header .language-dropdown .dropdown-item:hover{
+.header .language-dropdown .dropdown-item.active{
+    background-color: #E9EEF6;
+  color: #1A4173;
+}
+.header .language-dropdown .dropdown-item:hover{
   background-color: #E9EEF6;
   color: #1A4173;
 }
-
-/* header mobile */
 .nav-header-mobile {
     padding: 8px 16px;
     box-shadow: 0 2px 4px rgba(0,0,0,.08);
 }
+.nav-header-mobile .navbar-header-mb{
+  padding: 0 !important;
+}
 .nav-header-mobile .navbar-toggler,
 .nav-header-mobile .btn {
     border: none;
-    font-size: 1.5rem; /* Tăng kích thước icon */
+    flex-shrink: 0; 
 }
 .nav-header-mobile .navbar-toggler:focus,
 .nav-header-mobile .btn:focus {
     box-shadow: none;
 }
-.nav-header-mobile .navbar-brand {
-    position: absolute;
+.nav-header-mobile .navbar-brand{
+  margin-left: 60px !important;
+}
+.nav-header-mobile .offcanvas .navbar-brand{
+margin-left: 0 !important;
+}
+
+/* Default View */
+#nav-default-view .navbar-brand {
     left: 50%;
     transform: translateX(-50%);
 }
 
 /* Mobile Search View Style */
+#nav-search-view {
+    display: flex; 
+    flex-wrap: nowrap; 
+}
+
 #nav-search-view .form-search-mobile {
-  width: 300px;
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    margin: 0 1rem;
-    border: 1px solid #E4E4E7;
-    border-radius: 6px;
-    padding: 0 6px;
+    flex-grow: 1; 
+    margin: 0 1rem; 
+    border: 1px solid #ced4da;
+    border-radius: 6px; 
+    padding: 0 8px;
 }
 #nav-search-view .form-control {
     border: none;
@@ -171,16 +188,115 @@ p {
     box-shadow: none;
 }
 
-/* =================================== */
-/* RESPONSIVE CŨ */
-/* =================================== */
+/* Offcanvas Menu Styles */
+.nav-header-mobile .offcanvas-header {
+    border-bottom: 1px solid #E4E4E7;
+    padding-top: 10px !important ;
+    padding-bottom: 10px !important ;
+}
+
+.nav-header-mobile .offcanvas-body .nav-link {
+    font-size: 1.1rem;
+    padding: 12px 8px;
+}
+
+.nav-header-mobile .nav-mobile{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  
+}
 @media (max-width: 768px) {
   .nav-header{
-    /* Ẩn hoàn toàn header desktop trên mobile */
     display: none;
   }
 }
 
+hr{
+  margin: 10px 0;
+}
 
+/* Ghi đè padding của body và thêm footer */
+.offcanvas-start .offcanvas-body {
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
 
+.offcanvas-footer {
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Định dạng các Panel */
+.offcanvas-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); 
+    overflow-y: auto;
+    border-top: 1px solid rgb(133, 133, 133) ;
+}
+.offcanvas-panel.active {
+    transform: translateX(0); 
+    
+}
+.offcanvas-panel.is-leaving {
+    transform: translateX(-100%); 
+}
+
+/* Header của panel con */
+.panel-header {
+    display: flex;
+    align-items: center;
+}
+.panel-header h5 {
+    margin: 0;
+    flex-grow: 1;
+}
+.btn-back {
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    color: #6c757d;
+}
+.btn-back:hover {
+    color: #000;
+}
+.btn-back .material-symbols-outlined {
+    font-size: 1.25rem;
+}
+
+/* Định dạng các link trong menu */
+.offcanvas-panel .navbar-nav .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    color: #212529;
+}
+.offcanvas-panel .navbar-nav .nav-link:hover, .offcanvas-panel .navbar-nav .nav-link.active {
+    color: #0d6efd;
+}
+.nav-link.has-submenu .material-symbols-outlined {
+    color: #adb5bd;
+    font-size: 1.5rem; 
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+#nav-search-view .form-search-mobile,#nav-search-view #close-search-btn {
+  animation: slideInFromRight 0.3s ease-out forwards;
+}
 
