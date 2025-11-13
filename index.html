@@ -326,88 +326,20 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Press Cards Grid -->
-            <div class="row g-4">
-                <!-- Top-Left Large Card -->
-                <div class="col-lg-6">
-                    <article class="press-card press-card--large" style="background-image: url('https://cdn.tienphong.vn/images/11371a0e411b1c19f4e6d81a04045063cda36f08589115b878af02122855dfad2e0391a1cede72c8e86d95a909bdca637d87ef7bf618e445ef66321d1021292866154d174175ae7d8816f06b2e5a0477/anh-man-hinh-2025-11-05-luc-151917.png');">
-                        <div class="press-card__content">
-                            <p class="press-card__label">Case Study</p>
-                            <h3 class="press-card__title">How an AI experiment put Pixel fan in the driver’s seat</h3>
-                        </div>
-                        <div class="card-tag">
-                            <i class="fas fa-newspaper"></i><span>Tiền Phong</span>
-                        </div>
-                    </article>
-                </div>
-    
-                <!-- Top-Right Two Small Cards -->
-                <div class="col-lg-6">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <!-- Small card now uses a background-image style -->
-                            <article class="press-card press-card--small" style="background-image: url('https://img.cand.com.vn/resize/800x800/NewFiles/Images/2025/11/01/image001-1761959280130.jpg');">
-                                <div class="press-card__content">
-                                    <p class="press-card__label">Case Study</p>
-                                    <h3 class="press-card__title">How an AI experiment put Pixel fan in the driver’s seat</h3>
-                                </div>
-                                <div class="card-tag">
-                                    <i class="fas fa-shield-alt"></i><span>Công an Nhân Dân</span>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-md-6">
-                            <!-- Small card now uses a background-image style -->
-                            <article class="press-card press-card--small" style="background-image: url('https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2025/11/5/base64-17623291562971287808958.jpeg');">
-                                 <div class="press-card__content">
-                                    <p class="press-card__label">Case Study</p>
-                                    <h3 class="press-card__title">How an AI experiment put Pixel fan in the driver’s seat</h3>
-                                </div>
-                                <div class="card-tag">
-                                    <i class="fas fa-graduation-cap"></i><span>Tuổi trẻ</span>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Bottom-Left Large Card -->
-                <div class="col-lg-6">
-                     <article class="press-card press-card--large" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070');">
-                        <div class="press-card__content">
-                            <p class="press-card__label">Case Study</p>
-                            <h3 class="press-card__title">How an AI experiment put Pixel fan in the driver’s seat</h3>
-                        </div>
-                        <div class="card-tag">
-                            <i class="fas fa-leaf"></i><span>Hoa phượng đỏ</span>
-                        </div>
-                    </article>
-                </div>
-    
-                <!-- Bottom-Right Large Card -->
-                <div class="col-lg-6">
-                     <article class="press-card press-card--large" style="background-image: url('https://cdn.britannica.com/69/228369-050-0B18A1F6/Asian-Cup-Final-2019-Hasan-Al-Haydos-Qatar-Japan-Takumi-Minamino.jpg');">
-                        <div class="press-card__content">
-                            <p class="press-card__label">Case Study</p>
-                            <h3 class="press-card__title">How an AI experiment put Pixel fan in the driver’s seat</h3>
-                        </div>
-                        <div class="card-tag">
-                            <i class="fas fa-futbol"></i><span>Bóng đá số</span>
-                        </div>
-                    </article>
-                </div>
+            <div class="row g-4" id="pressCardsContainer">
+                <!-- Initial cards will be generated here -->
             </div>
-    
+
             <!-- Load More Button -->
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <a href="#" class="btn btn-load-more">Hiển thị thêm</a>
+                    <a href="#" class="btn-load-more" id="loadMoreBtn">Hiển thị thêm</a>
                 </div>
             </div>
         </div>
     </section>
-    
         <!-- Bootstrap JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script type="module" src="/assets/js/homepage.js"></script>

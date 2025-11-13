@@ -154,10 +154,7 @@
 }
 
 /* =================================================================
-   SERVICES SECTION STYLES (WITH PRECISE SPACING)
-   ================================================================= */
-/* =================================================================
-   SERVICES SECTION STYLES (COMPLETE)
+   SERVICES SECTION STYLES (HIỆU ỨNG PROGRESS BAR)
    ================================================================= */
 
 /* 1. Main Section Container */
@@ -170,7 +167,7 @@
 
 /* 2. Section Header */
 .services-section .section-header {
-    margin-bottom: 40px; /* Gap between header and content grid */
+    margin-bottom: 40px;
     font-family: 'Reddit Sans', sans-serif;
 }
 
@@ -178,7 +175,7 @@
     color: #1A4173;
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 16px; /* Space between title and subtitle */
+    margin-bottom: 16px;
 }
 
 .services-section .section-header .section-subtitle {
@@ -186,41 +183,36 @@
     font-size: 18px;
 }
 
-
-/* 3. Main Flexbox Wrapper (Controls the three-column layout) */
+/* 3. Main Flexbox Wrapper */
 .service-flex-wrapper {
     display: flex;
-    align-items: center;    /* Vertically aligns items to the middle */
-    justify-content: center; /* Horizontally centers the items */
-    gap: 20px;               /* Space between items */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* 4. Wrappers for Side Content (Handles the 64px padding) */
+/* 4. Wrappers for Side Content */
 .service-tabs-nav-wrapper {
     padding-right: 64px;
     flex-shrink: 0;
-    
-    /* --- THE FIX IS HERE --- */
-    /* Make this column a flex container to center its content */
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Ensures the tabs stay aligned to the right */
+    justify-content: flex-end;
 }
 
 .service-content-main-wrapper {
     padding-left: 64px;
     flex-shrink: 0;
-    width: 360px;       /* Gives the right-side content a fixed width */
+    width: 360px;
     display: flex;
     align-items: center;
 }
-
 
 /* 5. Tab Navigation Styling */
 .service-tabs-nav {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns buttons to the right */
+    align-items: flex-end;
     gap: 20px;
 }
 
@@ -239,6 +231,8 @@
     color: #71717A;
     font-size: 14px;
     font-weight: 600;
+    position: relative; /* Bắt buộc để chứa thanh progress bar */
+    overflow: hidden;   /* Giấu thanh bar khi nó ở ngoài phạm vi bo tròn */
 }
 
 .service-tab i {
@@ -257,28 +251,20 @@
     color: #111826;
 }
 
-
 /* 6. Image Styling */
 .service-image {
     width: 400px;
     height: 400px;
-    
-    /* Background Image Properties */
-    background-size: cover; /* This replaces object-fit */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    /* Appearance */
     border-radius: 12px;
     border: 1px solid #E4E4E7;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-    
-    /* Note: Fading background-image is complex; this provides an instant switch */
-    transition: opacity 0.4s ease; 
+    transition: opacity 0.4s ease;
 }
 
-
-/* 7. Right-Side Content Area (Handles fade transitions) */
+/* 7. Right-Side Content Area */
 .service-content-wrapper {
     position: relative;
 }
@@ -298,7 +284,7 @@
     position: relative;
 }
 
-/* 8. Text Styles within Content Area */
+/* 8. Text Styles */
 .service-content-title {
     font-size: 24px;
     font-weight: 600;
@@ -316,37 +302,68 @@
 }
 
 
-/* 9. Responsive Media Queries */
-@media (max-width: 1200px) {
-    /* On tablets and smaller, stack the items vertically */
-    .service-flex-wrapper {
-        flex-direction: column;
-        gap: 40px; /* Increase gap for vertical layout */
-    }
+.service-tab.active::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
 
-    /* Remove the large side paddings */
-    .service-tabs-nav-wrapper,
-    .service-content-main-wrapper {
-        padding: 0;
-        width: 100%;
-        max-width: 400px; /* Optional: Keep content from getting too wide */
-    }
+    background:
+        /* top    */ linear-gradient(#1A4173 0 0) 0 0 / 0    0.75px  no-repeat,
+        /* right  */ linear-gradient(#1A4173 0 0) 100% 0 / 0.75px 0    no-repeat,
+        /* bottom */ linear-gradient(#1A4173 0 0) 100% 100% / 0    0.75px  no-repeat,
+        /* left   */ linear-gradient(#1A4173 0 0) 0 100% / 0.75px 0    no-repeat;
 
-    /* Center the tabs and text content */
-    .service-tabs-nav {
-        align-items: center;
+    animation: fill-progress 5s linear forwards;
+}
+
+@keyframes fill-progress {
+    0% {
+        background-size:
+            0 0.75px,   /* top    */
+            0.75px 0,   /* right  */
+            0 0.75px,   /* bottom */
+            0.75px 0;   /* left   */
     }
-    .service-content-main-wrapper {
-        text-align: center;
+    41% {
+        background-size:
+            100% 0.75px,
+            0.75px 0,
+            0 0.75px,
+            0.75px 0;
+    }
+    50% {
+        background-size:
+            100% 0.75px,
+            0.75px 100%,
+            0 0.75px,
+            0.75px 0;
+    }
+    91% {
+        background-size:
+            100% 0.75px,
+            0.75px 100%,
+            100% 0.75px,
+            0.75px 0;
+    }
+    100% {
+        background-size:
+            100% 0.75px,
+            0.75px 100%,
+            100% 0.75px,
+            0.75px 100%;
     }
 }
+
+
 
 
 /* =================================================================
    PROJECTS SECTION STYLES
    ================================================================= */
    
-   .projects-section {
+.projects-section {
     background-color: #FFFFFF;
     padding: 64px 0;
 }
@@ -682,5 +699,6 @@
     color: #1A4173; background-color: #FFFFFF; border: 1px solid #1A4173;
     padding: 8px 16px; font-size: 14px; font-family: 'Reddit Sans', sans-serif; font-weight: 600;
     transition: all 0.3s ease;
+    border-radius: 6px;
 }
 .btn-load-more:hover { background-color: #1A4173; color: #FFFFFF; }
