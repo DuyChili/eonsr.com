@@ -6,25 +6,23 @@
 body.service-page-body {
     font-family: 'Reddit Sans', sans-serif;
     /* Nền xám nhạt từ Figma */
-    background-color: #F0F4F9; 
+    background-color: #FFFFFF;
 }
 
 /* 1. Wrapper chung (ĐÃ SỬA: Bỏ max-width) */
 .service-section-inner-wrapper {
     width: 100%;
-    /* XÓA: max-width: 1440px; */
-    /* XÓA: margin-left: auto; */
-    /* XÓA: margin-right: auto; */
-    padding: 0 64px;    /* '64' padding 2 bên */
-    box-sizing: border-box; /* Đảm bảo padding không làm tràn */
+    padding: 0 64px;
+    margin-top: 64px;
+    box-sizing: border-box;
 }
 
 /* 2. Section Giảng viên */
 .faculty-section-service {
     background: white;
     padding-top: 42px;
-    padding-bottom: 42px; 
-    
+    padding-bottom: 42px;
+
     /* 'gap: 24px' (khoảng cách giữa Tiêu đề và Hàng 1) */
     display: flex;
     flex-direction: column;
@@ -35,34 +33,39 @@ body.service-page-body {
 .section-header {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* 'gap: 16px' */
+    gap: 16px;
+    /* 'gap: 16px' */
 }
+
 .section-subtitleservices {
-    color: #1A4173; 
-    font-size: 18px; 
-    font-family: 'IBM Plex Sans', sans-serif; 
-    font-style: italic; 
-    font-weight: 600; 
+    color: #1A4173;
+    font-size: 18px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: italic;
+    font-weight: 600;
     line-height: 24px;
     margin-bottom: 0;
 }
+
 .section-title {
-    color: #1A4173; 
-    font-size: 28px; 
-    font-family: 'Reddit Sans', sans-serif; 
-    font-weight: 600; 
+    color: #1A4173;
+    font-size: 28px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 600;
     line-height: 33.60px;
 }
 
 /* 4. Hàng (Row) */
 .faculty-row {
-    --bs-gutter-x: 20px; /* 'gap: 20px' */
+    --bs-gutter-x: 20px;
+    /* 'gap: 20px' */
 }
 
 /* 5. Thẻ (Card) chung (ĐÃ SỬA: Bỏ width cố định) */
 .faculty-card {
-    width: 100%; /* SỬA: Đổi từ 424px sang 100% */
-    height: 424px; 
+    width: 100%;
+    /* SỬA: Đổi từ 424px sang 100% */
+    height: 424px;
     border-radius: 8px;
     padding: 16px;
     display: flex;
@@ -73,23 +76,27 @@ body.service-page-body {
 .faculty-card--name {
     justify-content: center;
     align-items: center;
-    gap: 24px; /* 'gap: 24px' */
+    gap: 24px;
+    /* 'gap: 24px' */
 }
+
 .faculty-name-wrapper {
     text-align: center;
 }
+
 .faculty-name-large {
-    color: #71717A; 
-    font-size: 48px; 
-    font-family: 'Reddit Sans', sans-serif; 
-    font-weight: 700; 
+    color: #71717A;
+    font-size: 48px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 700;
     line-height: 57.60px;
 }
+
 .faculty-nickname-large {
-    color: #71717A; 
-    font-size: 48px; 
-    font-family: 'Reddit Sans', sans-serif; 
-    font-weight: 700; 
+    color: #71717A;
+    font-size: 48px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 700;
     line-height: 57.60px;
 }
 
@@ -98,12 +105,15 @@ body.service-page-body {
     display: flex;
     gap: 16px;
 }
+
 .faculty-socials a {
     color: #1A4173;
-    font-size: 20px; /* Ước tính */
+    font-size: 20px;
+    /* Ước tính */
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .faculty-socials a:hover {
     color: #334155;
 }
@@ -112,12 +122,13 @@ body.service-page-body {
 .faculty-card--desc {
     justify-content: center;
 }
+
 .faculty-description {
-    color: #09090B; 
-    font-size: 16px; 
-    font-family: 'Reddit Sans', sans-serif; 
-    font-weight: 500; 
-    line-height: 32px; 
+    color: #09090B;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 500;
+    line-height: 32px;
     letter-spacing: 0.40px;
 }
 
@@ -128,8 +139,10 @@ body.service-page-body {
     background: #C4C4C4;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
     border: 1px solid #E4E4E7;
-    overflow: hidden; /* Bo góc ảnh */
+    overflow: hidden;
+    /* Bo góc ảnh */
 }
+
 .faculty-card--image img {
     width: 100%;
     height: 100%;
@@ -146,24 +159,26 @@ body.service-page-body {
     height: 424px;
     border-radius: 7px;
     background: linear-gradient(360deg, #6A595B 0%, rgba(131, 104, 107, 0) 100%);
-    
+
     padding: 16px;
     display: flex;
     align-items: flex-end;
 }
+
 .quote-overlay-dark p.quote-text {
     position: relative;
     max-width: 360px;
-    padding-left: 15px; 
-    
-    color: white; 
-    font-size: 20px; 
-    font-family: 'Inter', sans-serif; 
-    font-weight: 600; 
+    padding-left: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     line-height: 28px;
     z-index: 2;
     /* Xóa các icon quote từ figma */
 }
+
 /* XÓA: .quote-icon-open */
 /* XÓA: .quote-icon-close */
 
@@ -172,17 +187,19 @@ body.service-page-body {
 .faculty-divider {
     display: flex;
     align-items: center;
-    gap: 20px; 
-    margin: 24px 0; 
+    gap: 20px;
+    margin: 24px 0;
 }
+
 .divider-line {
     flex: 1;
-    height: 1.5px; 
+    height: 1.5px;
     background: #E0E0E0;
 }
+
 .divider-icon {
     width: 64px;
-    height: 64px; 
+    height: 64px;
     object-fit: contain;
 }
 
@@ -190,74 +207,90 @@ body.service-page-body {
 /* XÓA: Khối @media (max-width: 1400px) */
 
 @media (max-width: 991.98px) {
+
     /* Xếp chồng 3 cột */
     .faculty-row {
         justify-content: center;
     }
+
     .faculty-card {
         width: 100%;
-        max-width: 424px; /* Giữ kích thước gốc */
-        height: auto; /* Tắt chiều cao cố định */
+        max-width: 424px;
+        /* Giữ kích thước gốc */
+        height: auto;
+        /* Tắt chiều cao cố định */
         min-height: 300px;
     }
+
     .faculty-card--image {
-        height: 424px; /* Giữ chiều cao cho ảnh */
+        height: 424px;
+        /* Giữ chiều cao cho ảnh */
     }
+
     .faculty-card--name {
         order: 1;
     }
+
     .faculty-card--desc {
         order: 2;
     }
+
     .faculty-card--image {
         order: 3;
     }
+
     /* Hàng 2 (đảo ngược) */
     .faculty-row:nth-child(4) .faculty-card--image {
-         order: 1; /* Ảnh vẫn ở trên */
+        order: 1;
+        /* Ảnh vẫn ở trên */
     }
+
     .faculty-row:nth-child(4) .faculty-card--desc {
-         order: 2;
+        order: 2;
     }
+
     .faculty-row:nth-child(4) .faculty-card--name {
-         order: 3;
+        order: 3;
     }
 }
+
 @media (max-width: 767.98px) {
     .service-section-inner-wrapper {
-        padding: 0 24px; /* Giảm padding trên mobile */
+        padding: 0 24px;
+        /* Giảm padding trên mobile */
     }
+
     .faculty-section-service {
         padding-top: 32px;
         padding-bottom: 32px;
     }
+
     .faculty-name-large,
     .faculty-nickname-large {
         font-size: 36px;
         line-height: 1.2;
     }
 }
+
 /* =================================================================
    SECTION CTA (ĐÀO TẠO DOANH NGHIỆP) - CẬP NHẬT
    ================================================================= */
-.cta-section {
-    /* SỬA: Nền trắng (thay vì xám) */
-    background-color: #FFFFFF; 
-    padding: 64px 0;
-}
 
-/* XÓA BỎ HOÀN TOÀN CLASS .cta-container */
+
+.cta-section {
+    background-color: #FFFFFF;
+    /* SỬA: Chỉ cần padding-top. 
+       Padding-bottom sẽ do .cta-logo-bar xử lý */
+    padding-top: 64px;
+}
 
 /* 1. Phần nội dung (Text + Ảnh) */
 .cta-main-content {
-    /* Thêm padding-bottom để tạo khoảng cách với thanh logo */
+    /* Giữ nguyên padding-bottom để tạo khoảng cách với thanh logo */
     padding-bottom: 48px;
 }
 
-.cta-text {
-    /* (Căn lề đã được xử lý bởi .row) */
-}
-
+/* (Các class text, title, button, image... giữ nguyên) */
 .cta-title {
     font-size: 36px;
     font-weight: 700;
@@ -280,10 +313,6 @@ body.service-page-body {
     padding: 10px 20px;
     border-radius: 8px;
 }
-.cta-button:hover {
-    background-color: #14335a;
-    border-color: #14335a;
-}
 
 .cta-image img {
     width: 100%;
@@ -291,40 +320,48 @@ body.service-page-body {
     object-fit: contain;
 }
 
-/* 2. Thanh Logo (Dưới cùng) */
+
+/* 2. Thanh Logo (SỬA LẠI HOÀN TOÀN) */
 .cta-logo-bar {
+    border-top: 1px solid #E4E4E7;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; 
     align-items: center;
-    gap: 24px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    border-top: 1px solid #E4E4E7; 
+    justify-content: space-around;
+    gap: 48px;
 }
 
 .cta-logo {
-    max-height: 44px; /* Giới hạn chiều cao logo */
+    max-height: 44px;
+    /* Giới hạn chiều cao logo */
     width: auto;
     object-fit: contain;
 }
 
-/* 3. Responsive */
+/* 3. Responsive (SỬA LẠI) */
 @media (max-width: 991.98px) {
     .cta-text {
-        text-align: center; /* Căn giữa text khi xếp chồng */
+        text-align: center;
         margin-bottom: 40px;
     }
 }
+
 @media (max-width: 767.98px) {
-    /* (Không cần thay đổi responsive .cta-main-content) */
     .cta-logo-bar {
-        padding-left: 0;  /* Reset padding */
-        padding-right: 0; /* Reset padding */
-        justify-content: center; /* Căn giữa logo trên mobile */
+        /* Giảm gap trên mobile */
+        gap: 24px;
+
+        /* Thêm padding 2 bên để logo không dính sát viền */
+        padding-left: 24px;
+        padding-right: 24px;
     }
+
     .cta-logo {
         max-height: 20px;
-        flex-basis: 40%; /* Mỗi logo chiếm 40% (2 cột) */
+        /* Vẫn giữ 2 cột */
+        flex-basis: 40%;
     }
 }

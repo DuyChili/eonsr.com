@@ -773,9 +773,6 @@ LATEST NEWS SECTION STYLES (CẬP NHẬT THEO ẢNH MỚI)======================
 
 /* 2. Wrapper */
 .footer-container-main {
-    max-width: 1440px; 
-    margin-left: auto;
-    margin-right: auto;
     padding: 48px 64px; 
 }
 
@@ -828,7 +825,7 @@ LATEST NEWS SECTION STYLES (CẬP NHẬT THEO ẢNH MỚI)======================
 /* Container cho 2 cột Dịch vụ (Khớp Figma) */
 .footer-services-columns {
     display: flex;
-    gap: 60px; /* 'gap-[60px]' từ Figma */
+    gap: 20px; 
 }
 
 /* Danh sách link chung */
@@ -843,7 +840,7 @@ LATEST NEWS SECTION STYLES (CẬP NHẬT THEO ẢNH MỚI)======================
 
 /* Cột link Dịch vụ (Khớp Figma) */
 .footer-services-columns .footer-links {
-    width: 162px; /* 'w-[162px]' từ Figma */
+    width: 240px; 
 }
 
 /* Links */

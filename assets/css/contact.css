@@ -152,7 +152,17 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
+.footer-link-home{
+    margin-top: 24px;
+}
+.footer-link-home a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-style: italic; 
+}
+.footer-link-home:hover {
+    text-decoration: underline;
+}
 .map-container {
     min-height: 100vh;
 }
