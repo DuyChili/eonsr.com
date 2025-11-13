@@ -1,0 +1,843 @@
+/* =================================================================
+   PROJECT DETAIL PAGE STYLES (project_detail.css)
+   ================================================================= */
+
+body.project-detail-page-body {
+    font-family: 'Reddit Sans', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* =================================================================
+   1. SUB-NAV (DESKTOP)
+   ================================================================= */
+.project-subnav {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E4E4E7;
+    position: sticky;
+    top: 64px;
+    z-index: 1020;
+}
+
+.project-subnav-container {
+    padding-left: 64px;
+    padding-right: 64px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.project-subnav-container::-webkit-scrollbar {
+    display: none;
+}
+
+.project-subnav .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    margin-left: auto;
+    /* Căn phải */
+}
+
+.project-subnav .nav-link {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #71717A;
+    padding: 22px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-subnav .nav-link:hover {
+    color: #1A4173;
+}
+
+.project-subnav .nav-link.active {
+    color: #1A4173;
+    border-bottom-color: #1A4173;
+}
+
+/* =================================================================
+   2. SUB-NAV (MOBILE ACCORDION)
+   ================================================================= */
+.project-subnav-mobile.accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-bg: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.project-subnav-mobile .accordion-item {
+    border-bottom: 1px solid #E4E4E7;
+}
+
+.project-subnav-mobile .accordion-button {
+    padding: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #52525B;
+}
+
+.project-subnav-mobile .accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.project-subnav-mobile .accordion-button:not(.collapsed) {
+    color: #1A4173;
+    background-color: #FFFFFF;
+}
+
+.project-subnav-mobile .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2352525B'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(180deg);
+    /* Icon nhỏ */
+    width: 0.9rem;
+    height: 0.9rem;
+    background-size: 0.9rem;
+}
+
+.project-subnav-mobile .accordion-button:not(.collapsed)::after {
+    transform: rotate(0deg);
+}
+
+.project-subnav-mobile .accordion-body {
+    padding: 0;
+}
+
+.project-subnav-mobile .nav-link {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #52525B;
+    padding: 12px 16px;
+    border-left: 4px solid transparent;
+}
+
+.project-subnav-mobile .nav-link:hover {
+    color: #1A4173;
+}
+
+.project-subnav-mobile .nav-link.active {
+    background-color: #F0F4F9;
+    /* Bỏ gạch trái: border-left-color: #1A4173; */
+    color: #1A4173;
+    font-weight: 600;
+}
+
+/* =================================================================
+   3. PROJECT HERO SECTION
+   ================================================================= */
+.project-hero-section {
+    background-color: #FFFFFF;
+    margin-top: 64px;
+}
+
+/* Container (Căn giữa, 984px) */
+.project-hero-container {
+    /* SỬA: Dùng max-width 984px và margin auto
+       thay vì padding 228px
+    */
+    max-width: 984px;
+    margin: 0 auto;
+
+    /* Padding (Desktop) từ Figma: 42px top/bottom */
+    padding: 42px 16px;
+    /* 16px padding hông (từ figma) */
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #09090B;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.project-category i {
+    font-size: 14px;
+}
+
+.project-title {
+    color: #1A4173;
+    font-size: 48px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    /* SỬA: Xóa width: 834px (để nó tự co giãn) */
+}
+
+.project-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-meta-date {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding-right: 20px;
+    border-right: 1.5px solid #E0E0E0;
+    color: #6E727A;
+    font-size: 18px;
+    font-family: 'Reddit Sans', sans-serif;
+    line-height: 28px;
+}
+
+.project-meta-description {
+    flex-grow: 1;
+    color: #6E727A;
+    font-size: 18px;
+    font-family: 'Reddit Sans', sans-serif;
+    line-height: 28px;
+    margin: 0;
+}
+
+/* =================================================================
+   SỬA DROPDOWN SHARE
+   ================================================================= */
+
+/* Đảm bảo dropdown hoạt động */
+.project-meta-share.dropdown {
+    padding: 0;
+    /* Xóa padding của <a> cũ */
+}
+
+/* Style cho nút bấm dropdown (giống .project-meta-share a cũ) */
+.project-meta-share .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #6E727A;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-meta-share .dropdown-toggle:hover {
+    color: #1A4173;
+}
+
+/* Ẩn mũi tên mặc định của Bootstrap */
+.project-meta-share .dropdown-toggle::after {
+    display: none;
+}
+
+.project-meta-share .dropdown-item {
+    display: flex;
+    /* Để icon và text trên cùng một hàng */
+    align-items: center;
+    /* Căn giữa icon và text theo chiều dọc */
+    color: #333;
+    /* Màu chữ mặc định */
+    font-size: 14px;
+    /* Kích thước chữ */
+    padding: 8px 16px;
+    /* Padding cho mỗi item */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    /* Hiệu ứng chuyển động mượt mà */
+}
+
+.project-meta-share .dropdown-item:hover {
+    background-color: #E0E4EB;
+    /* Màu nền xanh nhạt khi hover */
+    color: #1A4173;
+    /* Màu chữ xanh đậm khi hover */
+}
+
+.project-meta-share .dropdown-item i {
+    font-size: 16px;
+    /* Kích thước icon */
+    width: 20px;
+    /* Đảm bảo icon có cùng chiều rộng để căn chỉnh */
+    text-align: center;
+    margin-right: 10px;
+    /* Khoảng cách giữa icon và text */
+}
+
+.project-summary-button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* =================================================================
+   SỬA NÚT "ĐỌC BẢN TÓM TẮT" VÀ TRẠNG THÁI CLICK (SHOW)
+   ================================================================= */
+
+/* 1. TRẠNG THÁI MẶC ĐỊNH (NỀN XANH, CHỮ TRẮNG) */
+.btn-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; 
+    padding: 12px 16px; 
+    
+    background: #1A4173; /* Nền xanh */
+    color: #F4F4F4; /* Chữ trắng */
+    border: 1px solid #1A4173; /* Thêm border để kích thước không nhảy */
+    
+    border-radius: 8px;
+    font-size: 16px; 
+    font-family: 'Reddit Sans', sans-serif; 
+    font-weight: 500; 
+    text-decoration: none;
+    transition: all 0.2s ease-in-out; /* Sửa transition */
+}
+
+/* 2. HOVER KHI CHƯA CLICK (NỀN XANH ĐẬM) */
+.btn-summary:hover {
+    background: #14335a;
+    border-color: #14335a;
+    color: #F4F4F4;
+}
+
+/* 3. TRẠNG THÁI ĐÃ CLICK (KHI DROPDOWN MỞ) */
+/* (NỀN TRẮNG, CHỮ XANH, VIỀN XANH) */
+.btn-summary.show,
+.btn-summary[aria-expanded="true"] {
+    background: #FFFFFF;
+    color: #1A4173;
+    border: 1px solid #1A4173;
+}
+
+/* 4. HOVER KHI ĐÃ CLICK (NỀN XANH NHẠT) */
+.btn-summary.show:hover,
+.btn-summary[aria-expanded="true"]:hover {
+    background: #F0F4F9; /* Nền xanh nhạt */
+    color: #1A4173;
+    border-color: #1A4173;
+}
+
+/* Style cho icon (đảm bảo icon đổi màu theo chữ) */
+.btn-summary i {
+    font-size: 14px;
+    color: inherit; /* Kế thừa màu từ nút cha */
+}
+
+/* SỬA: Thêm khối mới này để xoay icon khi click */
+.btn-summary.show .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* =================================================================
+   4. PROJECT ARTICLE SECTION (ĐÃ SỬA LẠI BỐ CỤC)
+   ================================================================= */
+.project-article-section {
+    background: white;
+    padding-top: 42px;
+    padding-bottom: 64px;
+}
+
+/* Container chính (Căn giữa, 984px) */
+.project-article-container {
+    max-width: 984px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 1. Ảnh chính (892px) */
+.article-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* 2. Wrapper nội dung (984px) */
+.article-body-wrapper {
+    width: 100%;
+    padding: 0 16px;
+    /* 'padding-left: 16px; padding-right: 16px;' */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Căn giữa các ảnh phụ bên trong */
+    gap: 24px;
+}
+
+/* 3. Style chữ (p, h2, list) */
+.article-body-wrapper p,
+.article-body-wrapper h2.article-h2,
+.article-body-wrapper .article-list,
+.article-body-wrapper .article-disclaimer,
+.article-body-wrapper .article-collapse-button,
+.article-body-wrapper .article-divider,
+.article-body-wrapper .article-info-accordion {
+    /* 'align-self: stretch' -> max-width 100% của 984-32 = 952px */
+    width: 100%;
+    max-width: 952px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-body-wrapper p {
+    color: #6E727A;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.article-body-wrapper p a {
+    color: #1A4173;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.article-body-wrapper h2.article-h2 {
+    color: #111826;
+    font-size: 24px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 600;
+    line-height: 28.80px;
+}
+
+/* 4. Ảnh phụ & Chú thích (594px) */
+.article-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    width: 100%;
+    /* Cho phép căn giữa */
+}
+
+.article-sub-image {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.article-sub-image-video {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article-figure figcaption {
+    color: #1A4173;
+    font-size: 12px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-style: italic;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.article-figure .caption-title {
+    font-weight: 600;
+}
+
+.article-figure .caption-body {
+    font-weight: 400;
+}
+
+/* 5. Danh sách (List) */
+.article-list {
+    padding-left: 20px;
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.article-list li {
+    color: #6E727A;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    padding-left: 4px;
+}
+
+.article-list li::marker {
+    color: #6E727A;
+}
+
+.article-list li strong {
+    color: #4B4F56;
+    font-weight: 600;
+}
+
+/* 6. Đường kẻ ngang */
+.article-divider {
+    height: 1.5px;
+    background: #E0E0E0;
+    border: none;
+    opacity: 1;
+}
+
+/* 7. "More Information" Accordion */
+.article-info-accordion.accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-bg: #FFFFFF;
+    margin-top: -1.5px;
+    margin-bottom: -1.5px;
+}
+
+.article-info-accordion .accordion-button {
+    padding: 24px 0;
+    color: #1A4173;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 500;
+}
+
+.article-info-accordion .accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.article-info-accordion .accordion-button:not(.collapsed) {
+    color: #1A4173;
+    background-color: #FFFFFF;
+    box-shadow: none;
+}
+
+.article-info-accordion .accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231A4173'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem;
+    transform: rotate(0deg);
+}
+
+.article-info-accordion .accordion-button:not(.collapsed)::after {
+    display: none;
+}
+
+.article-info-accordion .accordion-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 24px;
+}
+
+/* 8. Disclaimer List (<ol>) */
+.article-disclaimer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.article-disclaimer li {
+    color: #7396C6;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 28px;
+    padding-left: 8px;
+}
+
+/* 9. Nút Collapse */
+.article-collapse-button {
+    align-self: flex-start;
+    /* Căn trái */
+}
+
+.article-collapse-button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1A4173;
+    font-size: 14px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.article-collapse-button a:hover {
+    background-color: #F0F4F9;
+}
+
+
+/* =================================================================
+   RESPONSIVE (TOÀN TRANG)
+   ================================================================= */
+@media (max-width: 991.98px) {
+
+    /* Responsive Subnav (Desktop) */
+    .project-subnav-container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    /* Responsive Hero */
+    .project-hero-container {
+        padding-left: 32px;
+        padding-right: 32px;
+        max-width: 100%;
+        /* Cho phép co giãn */
+    }
+
+    .project-title {
+        font-size: 40px;
+    }
+
+    /* Responsive Article */
+    .project-article-container {
+        padding: 32px 16px;
+        /* Giảm padding */
+        max-width: 100%;
+        gap: 32px;
+    }
+
+    .article-body-wrapper {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Responsive Subnav (Desktop) */
+    .project-subnav-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .project-subnav .nav {
+        margin-left: 0;
+        /* Căn trái */
+        width: auto;
+    }
+
+    .project-subnav .nav-link {
+        padding: 16px 10px;
+    }
+
+    /* Responsive Hero */
+    .project-hero-container {
+        padding: 24px 16px;
+    }
+
+    .project-title {
+        font-size: 32px;
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    .project-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .project-meta-date {
+        border-right: none;
+        border-bottom: 1.5px solid #E0E0E0;
+        padding-right: 0;
+        padding-bottom: 16px;
+        width: 100%;
+    }
+
+    .project-meta-share {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .project-summary-button-row {
+        margin-top: 32px;
+    }
+
+    /* Responsive Article */
+    .project-article-container {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    .article-body-wrapper {
+        gap: 16px;
+    }
+}
+
+/* =================================================================
+   6. SCROLL PROGRESS BAR (THANH TIẾN TRÌNH CUỘN)
+   ================================================================= */
+.scroll-progress-bar {
+    position: absolute;
+    /* Đặt nó nằm trên đường viền 1px của subnav */
+    bottom: -1px;
+    left: 0;
+
+    /* Chiều cao của vạch (khớp với gạch chân 'active') */
+    height: 2px;
+
+    /* Màu xanh (giống link 'active') */
+    background-color: #1A4173;
+
+    /* Bắt đầu với chiều rộng 0, JS sẽ cập nhật */
+    width: 0%;
+
+    z-index: 1021;
+    /* Nằm trên các thành phần khác */
+}
+
+/* =================================================================
+   CSS CHO AI SUMMARY (CHUYỂN SANG DROPDOWN)
+   ================================================================= */
+
+/* Cần set position relative cho container */
+.project-summary-button-row.dropdown {
+    position: relative;
+    justify-content: center;
+}
+
+.ai-summary-dropdown-menu {
+    width: 700px;
+    max-width: 90vw;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 16px !important;
+    --bs-dropdown-min-width: auto;
+}
+
+/* Tiêu đề "General summary" */
+.ai-summary-title {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111826;
+    margin-bottom: 24px;
+}
+
+/* Đoạn văn bản chính (cho phép xuống dòng) */
+.ai-summary-text {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #374151;
+    white-space: normal;
+    /* Cho phép text xuống dòng */
+}
+
+/* Chú thích "Summaries were generated..." (cho phép xuống dòng) */
+.ai-summary-disclaimer {
+    font-size: 12px;
+    color: #71717A;
+    margin-top: 24px;
+    border-top: 1px solid #E4E4E7;
+    padding-top: 16px;
+    margin-bottom: 0;
+    white-space: normal;
+    /* Cho phép text xuống dòng */
+}
+
+/* "Explore other styles" */
+.ai-summary-styles {
+    margin-top: 24px;
+}
+
+.styles-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+/* Style cho các nút (Pills) */
+.styles-buttons .nav-pills .nav-link {
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 6px 16px;
+    margin-right: 8px;
+    color: #1A4173;
+    background-color: #F0F4F9;
+}
+
+.styles-buttons .nav-pills .nav-link.active {
+    color: #FFFFFF;
+    background-color: #1A4173;
+}
+/* =================================================================
+   BỔ SUNG CHO JS ẨN/HIỆN HEADER KHI CUỘN
+   ================================================================= */
+
+/* Thêm transition mượt mà cho header */
+.navbar-header {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Class JS sẽ thêm vào để ẩn header */
+.navbar-header.header-hidden {
+    transform: translateY(-100%);
+}
+/* =================================================================
+   BỔ SUNG CHO JS ĐẨY SUBNAV LÊN TOP 0
+   ================================================================= */
+
+.project-subnav {
+    background-color: #FFFFFF;
+    
+    /* === YÊU CẦU MỚI: ẨN "CHÂN" === */
+    border-bottom: none; /* SỬA TỪ '1px solid #E4E4E7' */
+    
+    position: sticky;
+    top: 64px; /* Vị trí mặc định khi header hiển thị */
+    z-index: 1020;
+    transition: top 0.3s ease-in-out;
+}
+
+/* Class mới để đẩy subnav desktop lên top 0 */
+.project-subnav.subnav-sticky-top {
+    top: 0;
+}
+
+/* Sửa lỗi cho subnav mobile (hiện đang là top: 0, 
+   nó phải là 64px khi header hiển thị) 
+*/
+.project-subnav-mobile.accordion {
+    top: 64px; /* SỬA TỪ 0 THÀNH 64px */
+    transition: top 0.3s ease-in-out; /* Thêm transition */
+}
+
+/* Class mới để đẩy subnav mobile lên top 0 */
+.project-subnav-mobile.accordion.subnav-sticky-top {
+    top: 0;
+}

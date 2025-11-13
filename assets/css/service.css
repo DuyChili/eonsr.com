@@ -1,0 +1,367 @@
+/* =================================================================
+   SERVICE PAGE STYLES (service.css)
+   CẬP NHẬT THEO BỐ CỤC 3 CỘT MỚI
+   ================================================================= */
+
+body.service-page-body {
+    font-family: 'Reddit Sans', sans-serif;
+    /* Nền xám nhạt từ Figma */
+    background-color: #FFFFFF;
+}
+
+/* 1. Wrapper chung (ĐÃ SỬA: Bỏ max-width) */
+.service-section-inner-wrapper {
+    width: 100%;
+    padding: 0 64px;
+    margin-top: 64px;
+    box-sizing: border-box;
+}
+
+/* 2. Section Giảng viên */
+.faculty-section-service {
+    background: white;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    /* 'gap: 24px' (khoảng cách giữa Tiêu đề và Hàng 1) */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 3. Tiêu đề Section (từ Figma) */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* 'gap: 16px' */
+}
+
+.section-subtitleservices {
+    color: #1A4173;
+    font-size: 18px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.section-title {
+    color: #1A4173;
+    font-size: 28px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 600;
+    line-height: 33.60px;
+}
+
+/* 4. Hàng (Row) */
+.faculty-row {
+    --bs-gutter-x: 20px;
+    /* 'gap: 20px' */
+}
+
+/* 5. Thẻ (Card) chung (ĐÃ SỬA: Bỏ width cố định) */
+.faculty-card {
+    width: 100%;
+    /* SỬA: Đổi từ 424px sang 100% */
+    height: 424px;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 6. Card Tên (Căn giữa) */
+.faculty-card--name {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    /* 'gap: 24px' */
+}
+
+.faculty-name-wrapper {
+    text-align: center;
+}
+
+.faculty-name-large {
+    color: #71717A;
+    font-size: 48px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 700;
+    line-height: 57.60px;
+}
+
+.faculty-nickname-large {
+    color: #71717A;
+    font-size: 48px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 700;
+    line-height: 57.60px;
+}
+
+/* Mạng xã hội (Icon rỗng) */
+.faculty-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.faculty-socials a {
+    color: #1A4173;
+    font-size: 20px;
+    /* Ước tính */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.faculty-socials a:hover {
+    color: #334155;
+}
+
+/* 7. Card Mô tả (Căn giữa) */
+.faculty-card--desc {
+    justify-content: center;
+}
+
+.faculty-description {
+    color: #09090B;
+    font-size: 16px;
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.40px;
+}
+
+/* 8. Card Ảnh */
+.faculty-card--image {
+    padding: 0;
+    position: relative;
+    background: #C4C4C4;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E4E4E7;
+    overflow: hidden;
+    /* Bo góc ảnh */
+}
+
+.faculty-card--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+/* Lớp phủ quote (gradient tối) */
+.quote-overlay-dark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 424px;
+    border-radius: 7px;
+    background: linear-gradient(360deg, #6A595B 0%, rgba(131, 104, 107, 0) 100%);
+
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.quote-overlay-dark p.quote-text {
+    position: relative;
+    max-width: 360px;
+    padding-left: 15px;
+
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 28px;
+    z-index: 2;
+    /* Xóa các icon quote từ figma */
+}
+
+/* XÓA: .quote-icon-open */
+/* XÓA: .quote-icon-close */
+
+
+/* 9. Dải phân cách */
+.faculty-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1.5px;
+    background: #E0E0E0;
+}
+
+.divider-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+/* 10. Responsive */
+/* XÓA: Khối @media (max-width: 1400px) */
+
+@media (max-width: 991.98px) {
+
+    /* Xếp chồng 3 cột */
+    .faculty-row {
+        justify-content: center;
+    }
+
+    .faculty-card {
+        width: 100%;
+        max-width: 424px;
+        /* Giữ kích thước gốc */
+        height: auto;
+        /* Tắt chiều cao cố định */
+        min-height: 300px;
+    }
+
+    .faculty-card--image {
+        height: 424px;
+        /* Giữ chiều cao cho ảnh */
+    }
+
+    .faculty-card--name {
+        order: 1;
+    }
+
+    .faculty-card--desc {
+        order: 2;
+    }
+
+    .faculty-card--image {
+        order: 3;
+    }
+
+    /* Hàng 2 (đảo ngược) */
+    .faculty-row:nth-child(4) .faculty-card--image {
+        order: 1;
+        /* Ảnh vẫn ở trên */
+    }
+
+    .faculty-row:nth-child(4) .faculty-card--desc {
+        order: 2;
+    }
+
+    .faculty-row:nth-child(4) .faculty-card--name {
+        order: 3;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .service-section-inner-wrapper {
+        padding: 0 24px;
+        /* Giảm padding trên mobile */
+    }
+
+    .faculty-section-service {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .faculty-name-large,
+    .faculty-nickname-large {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+}
+
+/* =================================================================
+   SECTION CTA (ĐÀO TẠO DOANH NGHIỆP) - CẬP NHẬT
+   ================================================================= */
+
+
+.cta-section {
+    background-color: #FFFFFF;
+    /* SỬA: Chỉ cần padding-top. 
+       Padding-bottom sẽ do .cta-logo-bar xử lý */
+    padding-top: 64px;
+}
+
+/* 1. Phần nội dung (Text + Ảnh) */
+.cta-main-content {
+    /* Giữ nguyên padding-bottom để tạo khoảng cách với thanh logo */
+    padding-bottom: 48px;
+}
+
+/* (Các class text, title, button, image... giữ nguyên) */
+.cta-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A4173;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.cta-description {
+    font-size: 16px;
+    color: #52525B;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.cta-button {
+    background-color: #1A4173;
+    border-color: #1A4173;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.cta-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+
+/* 2. Thanh Logo (SỬA LẠI HOÀN TOÀN) */
+.cta-logo-bar {
+    border-top: 1px solid #E4E4E7;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 48px;
+}
+
+.cta-logo {
+    max-height: 44px;
+    /* Giới hạn chiều cao logo */
+    width: auto;
+    object-fit: contain;
+}
+
+/* 3. Responsive (SỬA LẠI) */
+@media (max-width: 991.98px) {
+    .cta-text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cta-logo-bar {
+        /* Giảm gap trên mobile */
+        gap: 24px;
+
+        /* Thêm padding 2 bên để logo không dính sát viền */
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .cta-logo {
+        max-height: 20px;
+        /* Vẫn giữ 2 cột */
+        flex-basis: 40%;
+    }
+}

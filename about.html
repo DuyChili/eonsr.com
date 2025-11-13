@@ -12,6 +12,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -19,6 +20,174 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header>
+        <nav class="navbar-header navbar navbar-expand-md navbar-white bg-white nav-header fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img height="50"
+                        src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse pt-2 navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active px-3" href="javascript:void(0)">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Đối tác
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="/partner.html">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Microsoft</h4>
+                                                    <p class="content mb-0">A set of layered sections of content–known
+                                                        as the tab panels–that are...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">OpenAI</h4>
+                                                    <p class="content mb-0">A popup that displays information related to
+                                                        an element when the...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Dịch vụ
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="project.html">Dự án</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="javascript:void(0)">Bản tin</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <form class="d-flex me-auto">
+                            <div class="form-search">
+                                <a href="#"><img height="20" src="assets/images/search.png" alt=""></a>
+                                <input class="form-control-header me-2" type="text" placeholder="Tìm kiếm....">
+                            </div>
+                        </form>
+                        <div class="dropdown language-dropdown ms-3">
+                            <button class="d-flex align-items-center gap-2 dropdown-icon-menu" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://flagcdn.com/w20/vn.png" alt="VN">
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu shadow-sm p-2 mt-3">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                        <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                        <img src="https://flagcdn.com/w20/us.png" alt="EN"> Tiếng Anh
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- hero -->
     <section class="about-hero-section">
         <div class="container-fluid about-hero-container">
@@ -364,14 +533,83 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="platform-images-wrapper">
-                        <img src="assets/images/teamer.png" alt="Team discussing on laptop"
-                            class="platform-image-1">
+                        <img src="assets/images/teamer.png" alt="Team discussing on laptop" class="platform-image-1">
                         <img src="assets/images/teamer.png" alt="Team meeting" class="platform-image-2">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- footer -->
+    <footer class="site-footer">
+        <div class="footer-container-main">
+
+            <div class="footer-main-content">
+
+                <div class="footer-widget footer-widget-brand">
+                    <img class="footer-logo" src="assets/images/EONSR Logo ngang-01-màu chuẩn.png"
+                        alt="EONS REIMAGINED Logo">
+                    <p class="footer-description">
+                        Đối tác công nghệ đáng tin cậy, mang đến giải pháp số hóa toàn diện cho doanh nghiệp.
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="tel:YOUR_PHONE_NUMBER" aria-label="Số điện thoại">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:YOUR_EMAIL_ADDRESS" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="YOUR_LINKEDIN_URL" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-widget footer-widget-links">
+                    <h5 class="footer-widget-title">Liên kết</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget footer-widget-services">
+                    <h5 class="footer-widget-title">Dịch vụ</h5>
+                    <div class="footer-services-columns">
+                        <ul class="footer-links">
+                            <li><a href="#">Về dữ liệu</a></li>
+                            <li><a href="#">Về AI</a></li>
+                            <li><a href="#">Về chuyển đổi số</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li><a href="#">Về sáng tạo nội dung</a></li>
+                            <li><a href="#">Về đào tạo</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-copyright">
+                <div class="row align-items-center">
+
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <span class="copyright-text">
+                            Quyền tác giả ©2025 thuộc Công ty TNHH EON Tech. Bảo lưu mọi quyền.
+                        </span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">Bộ chính sách Quyền riêng tư</a></li>
+                            <li><a href="#">Bộ điều khoản và điều kiện</a></li>
+                            <li><a href="#">Chính sách Cookie</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Dự án - EONSR</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/project_detail.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="project-detail-page-body">
+    <header>
+        <nav class="navbar-header navbar navbar-expand-md navbar-white bg-white nav-header fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img height="50"
+                        src="assets/images/EONSR Logo ngang-01-màu chuẩn.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse pt-2 navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="javascript:void(0)">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Đối tác
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="/partner.html">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Microsoft</h4>
+                                                    <p class="content mb-0">A set of layered sections of content–known
+                                                        as the tab panels–that are...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">OpenAI</h4>
+                                                    <p class="content mb-0">A popup that displays information related to
+                                                        an element when the...</p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-3 dropdown-toggle d-flex align-items-center dropdown-icon-menu gap-1"
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Dịch vụ
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-header mt-3 p-4">
+                                <div class="row g-2">
+                                    <div class="col-lg-6 col-md-12 dropdown-left">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Google</h4>
+                                                    <p class="content mb-0">A modal dialog that interrupts the user with
+                                                        important content and expects...</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Tech X</h4>
+                                                    <p class="content mb-0">Displays an indicator showing the completion
+                                                        progress of a task...</p>
+                                                </div>
+                                            </a></li>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 dropdown-right">
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">Oddo</h4>
+                                                    <p class="content mb-0">For sighted users to preview content
+                                                        available behind a link.</p>
+                                                </div>
+                                            </a></li>
+                                        <li><a class="dropdown-item menu-header mb-2" href="#">
+                                                <div class="item">
+                                                    <h4 class="title">AWS</h4>
+                                                    <p class="content mb-0">Visually or semantically separates content.
+                                                    </p>
+                                                </div>
+                                            </a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="project.html">Dự án</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="javascript:void(0)">Bản tin</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <form class="d-flex me-auto">
+                            <div class="form-search">
+                                <a href="#"><img height="20" src="assets/images/search.png" alt=""></a>
+                                <input class="form-control-header me-2" type="text" placeholder="Tìm kiếm....">
+                            </div>
+                        </form>
+                        <div class="dropdown language-dropdown ms-3">
+                            <button class="d-flex align-items-center gap-2 dropdown-icon-menu" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://flagcdn.com/w20/vn.png" alt="VN">
+                                <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 16 16">
+                                    <path d="M4 6L8 10L12 6" stroke="#71717A" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu shadow-sm p-2 mt-3">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                        <img src="https://flagcdn.com/w20/vn.png" alt="VN"> Tiếng Việt
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                        <img src="https://flagcdn.com/w20/us.png" alt="EN"> Tiếng Anh
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="project-subnav d-none d-md-block">
+        <div class="project-subnav-container">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Creativity</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Digital Transformation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Management & Culture</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Privacy & Trust</a></li>
+            </ul>
+        </div>
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </nav>
+
+    <div class="project-subnav-mobile accordion d-md-none" id="mobileSubnav">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Future of Marketing
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#mobileSubnav">
+                <div class="accordion-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link active" href="#">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Creativity</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Digital Transformation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Management & Culture</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Privacy & Trust</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="project-hero-section">
+        <div class="project-hero-container">
+
+            <div class="project-category">
+                <img src="/assets/images/ic_e.png" alt="">
+                <span>Creativity</span>
+            </div>
+
+            <h1 class="project-title">How an AI experiment put Pixel fans in the driver’s seat</h1>
+
+            <div class="project-meta-row">
+                <div class="project-meta-date">
+                    <span>Oct 01, 2025</span>
+                    <span>10 min read</span>
+                </div>
+                <p class="project-meta-description">
+                    Gemini for Home is more than an update to your voice assistant. It understands what’s happening at
+                    home, and what’s important to you.
+                </p>
+                <div class="dropdown project-meta-share">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Share</span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="YOUR_LINKEDIN_URL_HERE" target="_blank">
+                                <i class="fab fa-linkedin me-2"></i>LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="YOUR_INSTAGRAM_URL_HERE" target="_blank">
+                                <i class="fab fa-instagram me-2"></i>Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="project-summary-button-row">
+                <a href="#" class="btn btn-summary">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <span>Đọc bản tóm tắt do AI tạo ra</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div> -->
+            <div class="project-summary-button-row dropdown">
+
+                <a href="javascript:void(0);" class="btn btn-summary" data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <span>Đọc bản tóm tắt do AI tạo ra</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+
+                <div class="dropdown-menu ai-summary-dropdown-menu">
+                    <h2 class="ai-summary-title">General summary</h2>
+
+                    <p class="ai-summary-text">
+                        Google is dedicated to supporting students, teachers, and schools in using AI effectively. Check
+                        out the new AI Literacy hub for resources like the "Raising kids in the age of AI" podcast for
+                        parents, the Be Internet Awesome curriculum for students, and AI training for educators. Also,
+                        Google.org's $40 million investment in AI literacy has benefited over 13 million students
+                        through organizations like AI4K12.
+                    </p>
+
+                    <p class="ai-summary-disclaimer">
+                        Summaries were generated by Google AI. Generative AI is experimental.
+                    </p>
+
+                    <div class="ai-summary-styles">
+                        <p class="styles-title">Explore other styles:</p>
+                        <div class="styles-buttons">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">General summary</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Bullet points</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-article-section">
+        <div class="project-article-container">
+
+            <img src="assets/images/thumnail_blog.png" alt="Project Hero Image" class="article-main-image">
+
+            <div class="article-body-wrapper">
+
+                <p>Nearly a decade ago, Google introduced millions of people to the convenience of a voice assistant in
+                    the home that provided hands-free help for everyday tasks. But the interaction was functional, not
+                    intuitive or natural. It was a transactional tool, not a collaborative partner.<br />Today, that
+                    begins to change. Gemini for Home is a new, foundational intelligence that transforms your
+                    relationship with your home. Gemini not only replaces the Google Assistant on your smart displays
+                    and speakers but upgrades the smarts of devices in your home like your cameras and doorbells as well
+                    as in the Google Home app. It’s built to be more conversational, to better understand what’s
+                    happening and to make it easier than ever to get things done at home.</p>
+
+                <h2 class="article-h2">A more natural conversation with your home</h2>
+
+                <p>For years, you’ve had to speak to your home in rigid, specific commands, but with Gemini, you can
+                    have truly organic conversations. Gemini gives you a selection of 10 new, more natural-sounding
+                    voices that have realistic pacing and intonation. This perfectly complements Gemini's ability to use
+                    real-time information to provide current, contextual answers.</p>
+
+                <p>Gemini can maintain conversational context, so you can have a real back-and-forth conversation
+                    without having to constantly repeat yourself. For example, after asking, "Hey Google, my dishwasher
+                    isn’t draining, what should I check first?" you can follow up simply with, "Hey Google, the filter
+                    looks good, what should I check next?" Gemini understands you're still talking about the dishwasher,
+                    so you don't have to start the whole conversation over.</p>
+
+                <p>This leap in understanding isn't just about answering new questions; it's about making everyday
+                    things you already do simpler and more intuitive. Gemini can better help you across with the main
+                    ways you use your assistant today: media, household coordination and smart home control.</p>
+
+                <h2 class="article-h2">Hands-free expert help with Gemini Live</h2>
+
+                <figure class="article-figure">
+                    <img src="assets/images/thumnail_blog.png" alt="AI Logistics" class="article-sub-image">
+                    <figcaption>
+                        <span class="caption-title">Ảnh minh họa:</span><span class="caption-body"> AI giúp tối ưu
+                            logistics và năng lượng. Hai nút thắt này ảnh hưởng trực tiếp tới mục tiêu tăng trưởng
+                            10%.</span>
+                    </figcaption>
+                </figure>
+
+                <p>Gemini is better at understanding how to help with everyday tasks, but it’s also better at
+                    free-flowing chats or brainstorms. When you want to have an even more free-flowing conversation, you
+                    can say, "Hey Google, let's chat," to talk to Gemini Live. <span class="text-primary">1</span> Now
+                    the hotword is gone: You can talk, you can pause, you can interrupt, you can pivot, you can follow
+                    up — just like you would with a person.<br />For example, you can figure out dinner from scratch by
+                    simply listing the ingredients you have on hand: "I have spinach, eggs, feta, and some bread... what
+                    can I make?" Then, you can refine the idea in real-time with follow-ups like, "Great. Now, what's a
+                    keto-friendly version?" and add another constraint like, "It also has to be something my kids will
+                    actually eat."</p>
+
+                <h2 class="article-h2">A smarter way to see your home, built with Gemini</h2>
+
+                <p>Another significant upgrade is that Gemini takes your smart cameras and turns them into true “AI”
+                    cameras. Until now, the smart camera experience was a constant stream of low-context alerts like
+                    "motion detected," "person detected," "package detected," leaving the burden on you to be a
+                    detective and figure out what matters. Gemini for Home fixes this by moving from simply alerting and
+                    recording to interpreting and understanding. It doesn't just see a “person” and a “package” — it has
+                    the semantic understanding to know that "a USPS delivery driver is placing a package on the porch
+                    and walking away." Here are three ways you’ll get better help from your cameras with Gemini:</p>
+
+                <ul class="article-list">
+                    <li><strong>Get alerts that tell the whole story:</strong> Gemini now provides AI descriptions 1
+                        directly in your alerts and your camera video history. This gives you a full narrative of what’s
+                        happening instead of just seeing a “motion detected” alert — you’re learning if it’s a delivery
+                        arriving or just a shadow moving.</li>
+                    <li><strong>Catch up on your day in seconds:</strong> Previously if you were away at work all day or
+                        on a trip and need to catch up quickly, you had to manually scroll through a long timeline of
+                        individual video clips...</li>
+                    <li><strong>Find any clip, just by asking:</strong> But what about when you’re not looking to catch
+                        up but to find a specific moment? With, Ask Home you can search hours, even days, of your video
+                        history using natural language...</li>
+                </ul>
+
+                <figure class="article-figure">
+                    <div class="ratio ratio-16x9 article-sub-image-video">
+                        <iframe src="https://www.youtube.com/embed/qVpSMfOH1zI" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <figcaption>
+                        <span class="caption-title">Tóm tắt:</span><span class="caption-body"> AI giúp tối ưu logistics
+                            và năng lượng. Hai nút thắt này ảnh hưởng trực tiếp tới mục tiêu tăng trưởng 10%.</span>
+                    </figcaption>
+                </figure>
+
+                <h2 class="article-h2">Ask Home: Your new, natural language command center</h2>
+
+                <p>As we begin this next era of Google Home, we know that building a truly helpful home is a long-term
+                    commitment...</p>
+                <p>That’s why we’re bringing Gemini for Home to every speaker, smart display, camera and doorbell we’ve
+                    made in the last decade...</p>
+                <p>To sign up for the early access program, use the Google Home app (version 4.0+): go to your profile
+                    icon, select Home settings, and then select Early access to enroll...</p>
+                <p>The Gemini for Home voice assistant will upgrade and replace the Google Assistant... <a
+                        href="#">Google AI Pro and Ultra</a> subscriptions at no extra cost.</p>
+
+                <hr class="article-divider">
+
+                <div class="article-info-accordion accordion" id="moreInfoAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingInfo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
+                                More Information
+                            </button>
+                        </h2>
+                        <div id="collapseInfo" class="accordion-collapse collapse" aria-labelledby="headingInfo">
+                            <div class="accordion-body">
+                                <ol class="article-disclaimer">
+                                    <li>Responses from Gemini for Home are provided by an LLM, As such, they may produce
+                                        factually inaccurate or fabricated information ("hallucinations")...</li>
+                                    <li>Requires compatible smart home devices.</li>
+                                    <li>Google Home Premium: (Advanced plan required).</li>
+                                    <li>Compatible camera with event based recording, or continuous video recording
+                                        required.</li>
+                                    <li>Google Home Premium subscription required.</li>
+                                </ol>
+                                <div class="article-collapse-button">
+                                    <a href="#collapseInfo" data-bs-toggle="collapse" aria-expanded="true"
+                                        aria-controls="collapseInfo">
+                                        <span>Collapse</span>
+                                        <i class="fas fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="article-divider">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="news-section-wrapper">
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="section-header">
+                        <h2 class="section-title">Các bài viết liên quan</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <p class="section-subtitle">EONSR tự hào kết nối sức mạnh từ các đối tác công nghệ hàng đầu thế
+                        giới để biến ý tưởng của doanh nghiệp thành giá trị số bền vững.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="news-card">
+                        <a href="#" class="news-card__link">
+                            <div class="news-card__image-wrapper">
+                                <img src="assets/images/thumbnail.png" alt="News thumbnail">
+                            </div>
+                            <div class="news-card__content">
+                                <h3 class="news-card__title">New in Firebase Studio: Forking and AI templates</h3>
+                                <p class="news-card__excerpt">Try new AI-optimized templates, forking, and streamlined
+                                    Firebase services to build apps.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="news-card">
+                        <a href="#" class="news-card__link">
+                            <div class="news-card__image-wrapper">
+                                <img src="assets/images/thumbnail.png" alt="News thumbnail">
+                            </div>
+                            <div class="news-card__content">
+                                <h3 class="news-card__title">New in Firebase Studio: Forking and AI templates</h3>
+                                <p class="news-card__excerpt">Try new AI-optimized templates, forking, and streamlined
+                                    Firebase services to build apps.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="news-card">
+                        <a href="#" class="news-card__link">
+                            <div class="news-card__image-wrapper">
+                                <img src="assets/images/thumbnail.png" alt="News thumbnail">
+                            </div>
+                            <div class="news-card__content">
+                                <h3 class="news-card__title">New in Firebase Studio: Forking and AI templates</h3>
+                                <p class="news-card__excerpt">Try new AI-optimized templates, forking, and streamlined
+                                    Firebase services to build apps.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <article class="news-card">
+                        <a href="#" class="news-card__link">
+                            <div class="news-card__image-wrapper">
+                                <img src="assets/images/thumbnail.png" alt="News thumbnail">
+                            </div>
+                            <div class="news-card__content">
+                                <h3 class="news-card__title">New in Firebase Studio: Forking and AI templates</h3>
+                                <p class="news-card__excerpt">Try new AI-optimized templates, forking, and streamlined
+                                    Firebase services to build apps.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+             <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <a href="#" class="btn btn-load-more">Hiển thị thêm</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-container-main">
+
+            <div class="footer-main-content">
+
+                <div class="footer-widget footer-widget-brand">
+                    <img class="footer-logo" src="assets/images/EONSR Logo ngang-01-màu chuẩn.png"
+                        alt="EONS REIMAGINED Logo">
+                    <p class="footer-description">
+                        Đối tác công nghệ đáng tin cậy, mang đến giải pháp số hóa toàn diện cho doanh nghiệp.
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="tel:YOUR_PHONE_NUMBER" aria-label="Số điện thoại">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:YOUR_EMAIL_ADDRESS" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="YOUR_LINKEDIN_URL" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-widget footer-widget-links">
+                    <h5 class="footer-widget-title">Liên kết</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget footer-widget-services">
+                    <h5 class="footer-widget-title">Dịch vụ</h5>
+                    <div class="footer-services-columns">
+                        <ul class="footer-links">
+                            <li><a href="#">Về dữ liệu</a></li>
+                            <li><a href="#">Về AI</a></li>
+                            <li><a href="#">Về chuyển đổi số</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li><a href="#">Về sáng tạo nội dung</a></li>
+                            <li><a href="#">Về đào tạo</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-copyright">
+                <div class="row align-items-center">
+
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <span class="copyright-text">
+                            Quyền tác giả ©2025 thuộc Công ty TNHH EON Tech. Bảo lưu mọi quyền.
+                        </span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">Bộ chính sách Quyền riêng tư</a></li>
+                            <li><a href="#">Bộ điều khoản và điều kiện</a></li>
+                            <li><a href="#">Chính sách Cookie</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/project_detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

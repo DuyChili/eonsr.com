@@ -13,6 +13,7 @@ body {
     /* Dùng để đảm bảo dải màu nằm dưới cùng của khối */
     display: flex;
     flex-direction: column;
+    margin-top: 64px;
 }
 
 .partner-banner-content {
