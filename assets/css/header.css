@@ -37,15 +37,17 @@ p {
   color: white;
   border-radius: 6px !important;
 }
-.nav-header .nav-link.active::after {
+.nav-header .nav-link.active::after,
+.nav-header .nav-link.dropdown-toggle.show::after {
   content: "";
   position: absolute;
-  bottom: -13px; 
+  bottom: -13px;
   left: 0;
   width: 100%;
   height: 2px;
   background-color: #1A4173;
 }
+
 
 .nav-header .dropdown-menu-header{
     width: 820px;

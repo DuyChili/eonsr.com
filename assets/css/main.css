@@ -934,12 +934,15 @@ LATEST NEWS SECTION STYLES (CẬP NHẬT THEO ẢNH MỚI)======================
     .footer-services-columns .footer-links {
         width: 45%; /* Chia 2 cột */
     }
+    .projects-section-wrapper, .footer-container-main {
+        padding: 0 15px !important;
+    }
+
+    
 }
 
 @media (max-width: 767.98px) {
-    .footer-container-main {
-        padding: 48px 24px;
-    }
+
     .site-footer {
         padding: 0; 
     }
@@ -959,152 +962,4 @@ LATEST NEWS SECTION STYLES (CẬP NHẬT THEO ẢNH MỚI)======================
     .footer-services-columns .footer-links {
         width: 100%;
     }
-}
-
-/* =================================================================
-   NỘI DUNG GỘP TỪ HEADER.CSS
-   ================================================================= */
-
-body {
-    font-family: 'Reddit Sans', sans-serif;
-}
-
-
-h1,
-h2,
-h3 {
-    font-family: 'Reddit Sans', sans-serif;
-    font-weight: 700;
-}
-
-p {
-    font-family: 'Reddit Sans', sans-serif;
-    font-weight: 400;
-}
-
-.navbar-header {
-    padding: 6px 64px;
-}
-
-/* logo */
-.nav-header .navbar-brand {
-    margin-right: 3rem;
-}
-
-/* menu header */
-.nav-header .nav-link {
-    position: relative;
-}
-
-.nav-header .nav-link.active {
-    color: #1A4173;
-    font-weight: bold;
-}
-
-.nav-header .nav-link:hover {
-    color: #1A4173;
-}
-
-.nav-header .nav-link.active::after {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #1A4173;
-}
-
-.nav-header .dropdown-menu-header {
-    width: 820px;
-}
-
-.nav-header .menu-header {
-    white-space: unset;
-    padding: 12px;
-    border-radius: 6px;
-    height: 90px;
-}
-
-.nav-header .menu-header .item p {
-    font-size: 14px;
-}
-
-.nav-header .menu-header .item h4 {
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.nav-header .nav-link.dropdown-toggle::after {
-    display: none !important;
-}
-
-.nav-header .dropdown-arrow {
-    display: inline-block;
-    transition: transform 0.25s ease;
-    transform-origin: center;
-}
-
-.nav-header .dropdown-icon-menu.show .dropdown-arrow {
-    transform: rotate(180deg) !important;
-}
-
-.nav-header .menu-header:hover {
-    background-color: #E9EEF6;
-}
-
-.nav-header .menu-header:hover .item h4 {
-    color: #1A4173;
-}
-
-@media (max-width: 768px) {
-    .navbar-header {
-        padding: 6px 0;
-    }
-
-    .nav-header .nav-link.active::after {
-        bottom: 1px;
-    }
-
-    .nav-header .dropdown-menu-header {
-        width: auto;
-    }
-
-    .nav-header .navbar-collapse {
-        border-top: 2px solid #E4E4E7;
-    }
-}
-
-/* tìm kiếm */
-.form-search {
-    justify-items: center;
-    border: 1px solid #E4E4E7;
-    border-radius: 6px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-.nav-header .form-control-header {
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
-
-/* menu language */
-.nav-header .language-dropdown button {
-    padding-block: 9px;
-    background-color: white;
-    border: 1px solid #E4E4E7;
-    border-radius: 6px;
-}
-
-.nav-header .language-dropdown .dropdown-item {
-    border-radius: 6px;
-}
-
-.nav-header .language-dropdown .dropdown-item:hover {
-    background-color: #E9EEF6;
-    color: #1A4173;
 }

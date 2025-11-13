@@ -59,7 +59,7 @@
     --bs-accordion-inner-border-radius: 0;
     --bs-accordion-bg: #FFFFFF;
     position: sticky;
-    top: 0;
+    top: 64px;
     z-index: 1020;
 }
 
