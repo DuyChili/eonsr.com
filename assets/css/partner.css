@@ -360,56 +360,64 @@ body {
         height: auto;
         overflow-y: visible;
     }
-    .customer-section{
+
+    .customer-section {
         padding: 0 15px !important;
     }
 }
+
 /* =================================================================
    CUSTOMER SECTION STYLES
    ================================================================= */
 
 .customer-section {
-    padding: 64px ;
+    padding: 64px;
     background-color: #FFFFFF;
 }
 
 /* 1. Tiêu đề Section */
 .customer-section .section-header {
-    margin-bottom: 64px; 
+    margin-bottom: 64px;
 }
 
 .customer-section .section-header .section-title {
-    color: #1A4173; 
-    font-size: 28px; 
-    font-weight: 600; 
+    color: #1A4173;
+    font-size: 28px;
+    font-weight: 600;
     font-family: 'Reddit Sans', sans-serif;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 .customer-section .section-header .section-subtitle {
-    color: #52525B; 
+    color: #52525B;
     font-size: 18px;
-    font-weight: 400; 
+    font-weight: 400;
     font-family: 'Reddit Sans', sans-serif;
-    line-height: 1.2; 
+    line-height: 1.2;
 }
 
 .customer-row-wrapper {
-    gap: 64px; 
+    gap: 64px;
 }
-.customer-row-wrapper > .col-lg-6 {
-    width: 539px; 
+
+.customer-row-wrapper>.col-lg-6 {
+    width: 539px;
     flex: 0 0 auto;
 }
 
 /* 3. Khối Logo bên trái */
 .customer-logo-box {
-    width: 444px; /* 'w-[444px]' */
-    height: 424px; /* 'h-[424px]' */
-    border: 1px solid #E4E4E7; /* 'border-slate-200' */
-    border-radius: 12px; /* 'rounded-xl' */
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10), 0px 1px 2px -1px rgba(0,0,0,0.10); /* 'shadow...' */
-    
+    width: 444px;
+    /* 'w-[444px]' */
+    height: 424px;
+    /* 'h-[424px]' */
+    border: 1px solid #E4E4E7;
+    /* 'border-slate-200' */
+    border-radius: 12px;
+    /* 'rounded-xl' */
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10);
+    /* 'shadow...' */
+
     /* Căn giữa logo bên trong */
     display: flex;
     align-items: center;
@@ -425,7 +433,8 @@ body {
 
 /* 4. Khối Text bên phải */
 .customer-text-content {
-    padding: 16px 20px; /* 'px-5 py-4' */
+    padding: 16px 20px;
+    /* 'px-5 py-4' */
 }
 
 .customer-text-content .customer-title {
@@ -433,96 +442,100 @@ body {
     font-size: 28px;
     font-weight: 600;
     font-family: 'Reddit Sans', sans-serif;
-    margin-bottom: 16px; /* 'gap-4' */
+    margin-bottom: 16px;
+    /* 'gap-4' */
 }
 
 .customer-text-content .customer-description {
     color: #52525B;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.75; /* 'leading-7' */
+    line-height: 1.75;
+    /* 'leading-7' */
     font-family: 'Reddit Sans', sans-serif;
 }
 
 /* 5. Responsive */
 @media (max-width: 991.98px) {
+
     /* Cho phép Bootstrap xử lý responsive */
     .customer-row-wrapper {
-        gap: 40px; 
+        gap: 40px;
     }
-    .customer-row-wrapper > .col-lg-5,
-    .customer-row-wrapper > .col-lg-6 {
-        width: auto; 
+
+    .customer-row-wrapper>.col-lg-5,
+    .customer-row-wrapper>.col-lg-6 {
+        width: auto;
         flex: 1 1 auto;
     }
+
     .customer-logo-box {
         /* Điều chỉnh chiều cao cho vừa vặn trên mobile */
         width: 100%;
-        max-width: 444px; /* Giữ max-width */
+        max-width: 444px;
+        /* Giữ max-width */
         height: auto;
         min-height: 300px;
-        margin: 0 auto; /* Căn giữa */
+        margin: 0 auto;
+        /* Căn giữa */
     }
+
     .customer-text-content {
-        text-align: center; /* Căn giữa text khi xếp chồng */
+        text-align: center;
+        /* Căn giữa text khi xếp chồng */
     }
 }
-/* =================================================================
-   SITE FOOTER STYLES (ĐÃ SỬA CĂN LỀ CÂN ĐỐI)
-   ================================================================= */
 
-/* 1. Container chính */
+/* =================================================================
+   SITE FOOTER STYLES (Dọn dẹp - Bootstrap 5 xử lý layout)
+   ================================================================= */
+
 .site-footer {
     background-color: #FFFFFF;
-    border-top: 1px solid #E4E4E7; 
+    border-top: 1px solid #E4E4E7;
 }
 
-/* 2. Wrapper */
+/* 1. Container chính (Thêm padding như trong ảnh) */
 .footer-container-main {
-    max-width: 1440px; 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 48px 64px; 
+    padding: 48px 64px;
 }
 
-/* 3. SỬA CHÍNH: CĂN LỀ CÂN ĐỐI */
+/* 2. Khoảng cách cho nội dung chính */
 .footer-main-content {
-    display: flex;
-    flex-wrap: wrap; 
-    /* SỬA: Đổi 'flex-start' thành 'space-between' */
-    justify-content: space-between; 
-    gap: 20px; 
-    margin-bottom: 32px; 
+    margin-bottom: 32px;
+}
+
+/* 3. Wrapper gom 2 khối links bên phải */
+.footer-links-group-wrapper {
+    /* Khoảng cách giữa 2 cột "Liên kết" và "Dịch vụ" */
+    gap: 200px;
 }
 
 /* 4. Các cột Widget */
 .footer-widget {
     display: flex;
     flex-direction: column;
-    gap: 16px; 
+    gap: 16px;
 }
 
-/* 5. Cột 1: Brand (ĐÃ XÓA WIDTH CỐ ĐỊNH) */
-.footer-widget-brand {
-    max-width: 450px; 
-}
-
-/* SỬA: Kích thước Logo (Khớp ảnh image_65eda4.png) */
+/* 5. Cột 1: Brand */
 .footer-widget-brand .footer-logo {
     width: auto;
-    max-width: 144px; 
-    height: auto; 
-    margin-bottom: 0; 
+    max-width: 144px;
+    /* Kích thước logo từ ảnh */
+    height: auto;
 }
 
 .footer-widget-brand .footer-description {
-    color: #334155; 
-    font-size: 14px; 
-    line-height: 1.5; 
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.5;
     margin-bottom: 0;
+    max-width: 350px;
+    /* Giới hạn độ rộng text */
 }
 
-/* Tiêu đề Widget */
+/* 6. Tiêu đề Widget */
 .footer-widget-title {
     color: #334155;
     font-size: 14px;
@@ -531,141 +544,124 @@ body {
     margin-bottom: 0;
 }
 
-/* Container cho 2 cột Dịch vụ (Khớp Figma) */
+/* 7. Container cho 2 cột Dịch vụ */
 .footer-services-columns {
-    display: flex;
-    gap: 60px; /* 'gap-[60px]' từ Figma */
+    gap: 60px;
 }
 
-/* Danh sách link chung */
+/* 8. Danh sách link chung */
 .footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px; 
+    gap: 8px;
 }
 
-/* Cột link Dịch vụ (Khớp Figma) */
 .footer-services-columns .footer-links {
-    width: 162px; /* 'w-[162px]' từ Figma */
+    width: 200px;
+    /* Giữ độ rộng cố định cho các cột Dịch vụ */
 }
 
-/* Links */
 .footer-links a {
-    color: #64748B; 
+    color: #64748B;
     font-size: 14px;
     line-height: 16.8px;
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition: color 0.3s ease;
 }
+
 .footer-links a:hover {
     color: #1A4173;
     text-decoration: underline;
 }
 
+/* 9. Icons */
 .footer-social-icons {
     display: flex;
     align-items: center;
-    gap: 16px; 
+    gap: 16px;
 }
+
 .footer-social-icons a {
-    /* Bỏ vòng tròn, chỉ giữ icon */
-    color: #1A4173; 
-    font-size: 20px; 
+    color: #1A4173;
+    font-size: 20px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .footer-social-icons a:hover {
-    color: #334155; 
+    color: #334155;
 }
 
+/* 10. Khu vực Copyright */
 .footer-copyright {
-    padding-top: 32px; 
-    padding-bottom: 32px; 
-    border-top: 1px solid #E4E4E7; 
+    padding-top: 32px;
+    border-top: 1px solid #E4E4E7;
 }
 
-/* SỬA 1: In nghiêng và màu xanh */
 .copyright-text {
-    color: #1A4173;      /* Màu xanh */
+    color: #1A4173;
     font-size: 12px;
     line-height: 14.4px;
-    font-style: italic; /* In nghiêng */
+    font-style: italic;
 }
 
-/* Links phụ */
+/* Links phụ (đã dùng Bootstrap để căn lề) */
 .footer-bottom-links {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: flex-end; 
-    gap: 20px; 
+    gap: 20px;
 }
+
 .footer-bottom-links li {
     display: inline-block;
 }
 
-/* SỬA 2: In nghiêng, màu xanh, và gạch chân khi hover */
 .footer-bottom-links a {
-    color: #1A4173;      /* Màu xanh */
+    color: #1A4173;
     font-size: 12px;
     line-height: 14.4px;
-    font-style: italic; /* In nghiêng */
-    text-decoration: none; /* Bỏ gạch chân mặc định */
+    font-style: italic;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
+
 .footer-bottom-links a:hover {
-    text-decoration: underline; /* Gạch chân khi hover */
+    text-decoration: underline;
 }
 
-/* 10. Responsive */
-@media (max-width: 991.98px) {
-    /* Xếp chồng các widget */
-    .footer-main-content {
-        flex-direction: column;
-        gap: 32px; 
-    }
-    
-    .footer-widget-brand,
-    .footer-widget-links,
-    .footer-widget-services {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .footer-services-columns {
-        gap: 30px;
-        justify-content: flex-start; /* Căn trái khi xếp chồng */
-    }
-    .footer-services-columns .footer-links {
-        width: 45%; /* Chia 2 cột */
-    }
-}
-
+/* 11. Responsive (điều chỉnh padding) */
 @media (max-width: 767.98px) {
     .footer-container-main {
         padding: 48px 24px;
     }
-    .site-footer {
-        padding: 0; 
+
+    .footer-links-group-wrapper {
+        /* Giảm khoảng cách giữa 'Liên kết' và 'Dịch vụ' trên mobile */
+        gap: 40px;
+        flex-direction: column;
+        /* Xếp chồng 2 khối */
     }
-    .footer-copyright .row > div {
-        text-align: center; 
-    }
-    .footer-bottom-links {
-        justify-content: center; 
-        flex-direction: column; 
-        gap: 12px; 
-        margin-top: 16px;
-    }
+
     .footer-services-columns {
-        flex-direction: column; 
-        gap: 8px;
-    }
-    .footer-services-columns .footer-links {
-        width: 100%;
+        gap: 30px;
+        /* Giảm khoảng cách 2 cột dịch vụ */
     }
 }
+
+@media (max-width: 575.98px) {
+    .footer-services-columns {
+        flex-direction: column;
+        /* Xếp chồng 2 cột dịch vụ trên XS */
+        gap: 8px;
+    }
+
+    .footer-services-columns .footer-links {
+        width: 100%;
+        /* Cho 2 cột dịch vụ rộng 100% khi xếp chồng */
+    }
+}
+
