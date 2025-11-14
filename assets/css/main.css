@@ -430,7 +430,8 @@ body {
     /* Multi-layer background: Image on top, solid white behind it */
     background-repeat: no-repeat;
     background-position: top center, center;
-    background-size: 100% 155px, cover;
+    /* background-size: 100% 155px, cover; */
+    background-size: cover;
     /* Default image height is 155px */
     background-image: var(--bg-image), linear-gradient(to top, white, white);
     
