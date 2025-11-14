@@ -206,4 +206,4 @@ document.getElementById('loadMoreBtn').addEventListener('click', function(e) {
 });
 
 // Render bài viết ban đầu
-renderArticles();
+renderArticles(); 
